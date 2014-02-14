@@ -188,8 +188,15 @@ h2:first-child {
 	display: none;
 }
 
+.promoCode {
+	max-width: 165px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
-
+.labelWrap {
+	margin: 15px 0;
+}
 
 
 
@@ -359,7 +366,7 @@ input[type=radio].styled + label:before {
 	width: 25px;
 	height: 25px;
 	background: url(../img/sprite.png) 0 -26px no-repeat;
-	position: absolute;left: 0;bottom: 0;
+	position: absolute;left: 0;top: 0;
 }
 input[type=radio].styled:checked + label:before {
 	background-position: -32px -26px;
@@ -372,7 +379,7 @@ input[type=checkbox].styled + label:before {
 	width: 28px;
 	height: 25px;
 	background: url(../img/sprite.png) 0 0 no-repeat;
-	position: absolute;left: 0;bottom: 0;
+	position: absolute;left: 0;top: 0;
 }
 
 

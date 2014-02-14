@@ -9,10 +9,11 @@ $(function() {
 
 		$('.btn-submit').on('click', function () {
 			els.each(function () {
-				var r = checkValid($(this),true);
+				var r = checkValid($(this), true);
 				if(r) ready++;
 			})
 			if(els.length === ready) {
+				ready = 0;
 				console.log('all done');
 				alert( 'go ajax' );
 			} else {
@@ -23,13 +24,28 @@ $(function() {
 			checkValid($(this));
 		});
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		function checkValid(el, submit) {
 			el.removeClass('invalid');
 			el.next('.valid_message').remove();
-			// $('.valid_message').remove();
 
 			var type,
 				reg;
+				
 			var valid = {
 				'phone'      : /\(\d{3}\)\d{3}\-\d{2}\-\d{2}/,
 				'email'      : /(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/,
@@ -52,14 +68,11 @@ $(function() {
 			}
 
 			if(!el.val()) {
-					var msg = messages.empty,
-						type;
 					el.addClass('invalid');
 
-					if(el.data('valid')) {
-						type = el.data('valid');
-						msg = messages[type];
-					}
+					var msg = messages.empty;
+
+					if(el.data('valid')) msg = messages[el.data('valid')];
 
 					$('<p class="valid_message">'+msg+'</p>').insertAfter(el).hide().slideDown(300);
 				return;
@@ -75,10 +88,11 @@ $(function() {
 						msg = messages[type];
 						$('<p class="valid_message">'+msg+'</p>').insertAfter(el).hide().slideDown(300);
 						return;
-					} else if(submit) {
-						ready++;
 					}
 				}
+			}
+			if(submit) {
+				return true;
 			}
 		}
 	})();
