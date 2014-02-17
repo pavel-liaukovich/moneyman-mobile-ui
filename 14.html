@@ -51,12 +51,12 @@
 						<b>+7</b>
 					</div>
 					<div class="col-xs-11">
-						<input type="tel" class="full novalid validManual" placeholder="(xxx)xxx-xx-xx" data-valid="phone" />
+						<input type="tel" name="phone_home" class="full novalid validManual" placeholder="(xxx)xxx-xx-xx" data-valid="phone" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<input type="checkbox" id="adr" class="styled" />
+						<input type="checkbox" name="sameAddr" id="adr" class="novalid styled" />
 						<label for="adr" class="adr-label">
 							Мой адрес пребывания совпадает <br />
 							с адресом прописки
@@ -67,59 +67,64 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Регион проживания</p>
-						<select class="full">
+						<select class="full" name="reg1">
 							<option> </option>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Район (поселок, деревня, село)</p>
-						<select class="full">
+						<select class="full" name="reg2">
 							<option> </option>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Город</p>
-						<select class="full">
+						<select class="full" name="reg3">
 							<option> </option>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Населенный пункт</p>
-						<select class="full">
+						<select class="full" name="reg4">
 							<option> </option>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Улица</p>
-						<select class="full">
+						<select class="full" name="reg5">
 							<option> </option>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-3">
 						<p class="form-title">Дом</p>
-						<input type="text" maxlength="7" class="full" data-valid="address" />
+						<input type="text" name='reg6' maxlength="7" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Стр.</p>
-						<input type="text" maxlength="4" class="full" data-valid="address" />
+						<input type="text" name="reg7" maxlength="4" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Корп.</p>
-						<input type="text" maxlength="4" class="full" data-valid="address" />
+						<input type="text" name="reg8" maxlength="4" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Кв.</p>
-						<input type="text" class="full" maxlength="4" data-valid="digits" />
+						<input type="text" name="reg9" class="full" maxlength="4" data-valid="digits" />
 					</div>
 				</div>
 				

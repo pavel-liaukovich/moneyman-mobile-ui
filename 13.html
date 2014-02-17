@@ -44,26 +44,26 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Фамилия</p>
-						<input type="text" class="full" data-valid="name">
+						<input type="text" name="lastName" class="full" data-valid="name">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Имя</p>
-						<input type="text" class="full" data-valid="name">
+						<input type="text" name="name" class="full" data-valid="name">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Отчество</p>
-						<input type="text" class="full" data-valid="name">
+						<input type="text" name="patronymic" class="full" data-valid="name">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Пол</p>
-						<input type="radio" class="styled" name="gender" id="gender1" checked /><label for="gender1" class="mr10">Мужской</label>
-						<input type="radio" class="styled" name="gender" id="gender2" /><label for="gender2">Женский</label>
+						<input type="radio" class="novalid styled" name="gender" id="gender1" checked /><label for="gender1" class="mr10">Мужской</label>
+						<input type="radio" class="novalid styled" name="gender" id="gender2" /><label for="gender2">Женский</label>
 					</div>
 				</div>
 				<!-- 3 items -->
@@ -75,17 +75,17 @@
 				<div class="row">
 					<div class="col-xs-3">
 						<!-- <input type="text" placeholder="01" style="width:45px;" class="tac"> -->
-						<select class="full">
+						<select class="full" name="birthdate1">
 							<option>01</option>
 						</select>
 					</div>
 					<div class="col-xs-5">
-						<select class="full">
+						<select class="full" name="birthdate2">
 							<option>Января</option>
 						</select>
 					</div>
 					<div class="col-xs-4 tar">
-						<select>
+						<select name="birthdate3">
 							<option>1980</option>
 						</select>
 					</div>
@@ -93,17 +93,17 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Место рождения</p>
-						<input type="text" class="full" data-valid="birthplace">
+						<input type="text" name="birthplace" class="full" data-valid="birthplace">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-5">
 						<p class="form-title">Серия</p>
-						<input type="text" class="full" maxlength="4" data-valid="digits">
+						<input type="text" name="pass_series" class="full" maxlength="4" data-valid="digits">
 					</div>
 					<div class="col-xs-5">
 						<p class="form-title">№ паспорта</p>
-						<input type="text" class="full" maxlength="6" data-valid="digits">
+						<input type="text" name="pass_nomer" class="full" maxlength="6" data-valid="digits">
 					</div>
 				</div>
 				<div class="row">
@@ -113,17 +113,17 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-3">
-						<select>
+						<select name="pass_ext1">
 							<option>01</option>
 						</select>
 					</div>
 					<div class="col-xs-5">
-						<select class="full">
+						<select class="full" name="pass_ext2">
 							<option>Января</option>
 						</select>
 					</div>
 					<div class="col-xs-4 tar">
-						<select>
+						<select name="pass_ext3">
 							<option>1980</option>
 						</select>
 					</div>
@@ -131,65 +131,65 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Кем выдан</p>
-						<input type="text" class="full">
+						<input type="text" class="full" name="pass_who">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Регион прописки</p>
-						<select class="full">
-							<option> </option>
+						<select class="full" name="reg1">
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Район (поселок, деревня, село)</p>
-						<select class="full">
-							<option> </option>
+						<select class="full" name="reg2">
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Город</p>
-						<select class="full">
-							<option> </option>
+						<select class="full" name="reg3">
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Населенный пункт</p>
-						<select class="full">
-							<option> </option>
+						<select class="full" name='reg4'>
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<p class="form-title">Улица</p>
-						<select class="full">
-							<option> </option>
+						<select class="full" name="reg5">
+							<option>1</option>
 						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-3">
 						<p class="form-title">Дом</p>
-						<input type="text" maxlength="7" class="full" data-valid="address" />
+						<input type="text" name="reg6" maxlength="7" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Стр.</p>
-						<input type="text" maxlength="4" class="full" data-valid="address" />
+						<input type="text" name="reg7" maxlength="4" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Корп.</p>
-						<input type="text" maxlength="4" class="full" data-valid="address" />
+						<input type="text" name="reg8" maxlength="4" class="full" data-valid="address" />
 					</div>
 					<div class="col-xs-3">
 						<p class="form-title">Кв.</p>
-						<input type="text" class="full" maxlength="4" data-valid="digits" />
+						<input type="text" name="reg9" class="full" maxlength="4" data-valid="digits" />
 					</div>
 				</div>
 				<div class="row">
@@ -202,13 +202,13 @@
 						<b>+7</b>
 					</div>
 					<div class="col-xs-11">
-						<input type="tel" class="full" placeholder="(xxx)xxx-xx-xx" data-valid="phone" />
+						<input type="tel" name="phone_home" class="full" placeholder="(xxx)xxx-xx-xx" data-valid="phone" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-9">
 						<p class="form-title">Семейное положение</p>
-						<select class="full">
+						<select class="full" name="family">
 							<option>Холост</option>
 						</select>
 					</div>

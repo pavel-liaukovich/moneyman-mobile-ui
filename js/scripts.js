@@ -14,7 +14,9 @@ $(function() {
 			})
 			if(els.length === ready) {
 				ready = 0;
-				console.log('all done');
+
+				var serialize = $('.form').find(':input').serializeArray();
+				console.log(serialize);
 				alert( 'go ajax' );
 			} else {
 				ready = 0;
@@ -53,7 +55,7 @@ $(function() {
 				'name'       : /^[А-яЁё]{1,32}$/,
 				'birthplace' : /^[А-яЁё0-9.-]{1,150}$/,
 				'digits'     : /^\d+$/,
-				'address'    : /^[А-яЁё0-9-\/]$/
+				'address'    : /^[А-яЁё0-9-\/]+$/
 
 			}
 			var messages = {
