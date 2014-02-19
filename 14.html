@@ -2,7 +2,7 @@
 <html>
 	<head> 
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		
@@ -21,9 +21,7 @@
 	<body> 
 		<div id="wrapper" class="clearfix gray-bg"> 
 			<header id="header"> 
-				<div class="tac">
-					<a href="#"><h1 class="logo ir">MoneyMan</h1></a>
-				</div>
+				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
 				<a class="menuButton"></a>
 				<table class="headerTabs">
 					<tr>
@@ -40,87 +38,90 @@
 				</table>
 			</header> 
 			<div id="body" class="container-fluid gray form">
-				<h2>Фактический адрес проживания</h2>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Домашний телефон</p>
+				<form action="" class="form14">
+					<h2>Фактический адрес проживания</h2>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="form-title">Домашний телефон</p>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-1 prn pt8" style="margin-right:-5px;">
-						<b>+7</b>
-					</div>
-					<div class="col-xs-11">
-						<input type="tel" name="phone_home" class="full novalid validManual" placeholder="(xxx)xxx-xx-xx" data-valid="phone" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<input type="checkbox" name="sameAddr" id="adr" class="novalid styled" />
-						<label for="adr" class="adr-label">
-							Мой адрес пребывания совпадает <br />
-							с адресом прописки
-						</label>
+					<div class="row">
+						<div class="col-xs-1 prn pt8" style="margin-right:-5px;">
+							<b>+7</b>
+						</div>
+						<div class="col-xs-11">
+						<input type="tel" name="phone_home" class="full tel" placeholder="(___)___-__-__" required />
+						</div>
 					</div>
 					
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Регион проживания</p>
-						<input type="text" name="reg1" class="full autocomplete" data-source="region">
+					<div class="row">
+						<div class="col-xs-12">
+						<input type="checkbox" name="sameAddr" id="fact_adr" class="novalid styled" />
+							<label for="fact_adr" class="adr-label">
+								Мой адрес пребывания совпадает <br />
+								с адресом прописки
+							</label>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Район (поселок, деревня, село)</p>
-						<input type="text" name="reg2" class="full autocomplete" data-source="region">
+					<div class="blockHide">
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Регион проживания</p>
+								<input type="text" name="reg1" class="full autocomplete" data-source="region" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Район (поселок, деревня, село)</p>
+								<input type="text" name="reg2" class="full autocomplete" data-source="region" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Город</p>
+								<input type="text" name="reg3" class="full autocomplete" data-source="region" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Населенный пункт</p>
+								<input type="text" name="reg4" class="full autocomplete" data-source="region" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Улица</p>
+								<input type="text" name="reg5" class="full autocomplete" data-source="region" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-3">
+								<p class="form-title">Дом</p>
+								<input type="text" name='reg6' maxlength="7" class="full" data-valid="address" />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Стр.</p>
+								<input type="text" name="reg7" maxlength="4" class="full" data-valid="address" />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Корп.</p>
+								<input type="text" name="reg8" maxlength="4" class="full" data-valid="address" />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Кв.</p>
+								<input type="text" name="reg9" class="full" maxlength="4" data-valid="digits" />
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Город</p>
-						<input type="text" name="reg3" class="full autocomplete" data-source="region">
+
+
+					<div class="row">
+						<div class="col-xs-12 further">
+							<a href="#">Назад</a>
+							<button class="btn btn-green btn-submit">Далее</button>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Населенный пункт</p>
-						<input type="text" name="reg4" class="full autocomplete" data-source="region">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Улица</p>
-						<input type="text" name="reg5" class="full autocomplete" data-source="region">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-3">
-						<p class="form-title">Дом</p>
-						<input type="text" name='reg6' maxlength="7" class="full" data-valid="address" />
-					</div>
-					<div class="col-xs-3">
-						<p class="form-title">Стр.</p>
-						<input type="text" name="reg7" maxlength="4" class="full" data-valid="address" />
-					</div>
-					<div class="col-xs-3">
-						<p class="form-title">Корп.</p>
-						<input type="text" name="reg8" maxlength="4" class="full" data-valid="address" />
-					</div>
-					<div class="col-xs-3">
-						<p class="form-title">Кв.</p>
-						<input type="text" name="reg9" class="full" maxlength="4" data-valid="digits" />
-					</div>
-				</div>
-				
-				
-				
-				<div class="row">
-					<div class="col-xs-12 further">
-						<a href="#">Назад</a>
-						<button class="btn btn-green btn-submit">Далее</button>
-					</div>
-				</div>
+				</form>
 			</div> 
 		</div> 
 		<footer id="footer"> 

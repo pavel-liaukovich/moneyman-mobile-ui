@@ -2,7 +2,7 @@
 <html>
 	<head> 
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		
@@ -17,13 +17,11 @@
 		<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
 
 	 <title>Занятость и доходы</title> 
-	</head> 
-	<body> 
+	</head>
+	<body>
 		<div id="wrapper" class="clearfix gray-bg"> 
 			<header id="header"> 
-				<div class="tac">
-					<a href="#"><h1 class="logo ir">MoneyMan</h1></a>
-				</div>
+				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
 				<a class="menuButton"></a>
 				<table class="headerTabs">
 					<tr>
@@ -40,82 +38,82 @@
 				</table>
 			</header> 
 			<div id="body" class="container-fluid gray form">
-				<h2>Занятость и доходы</h2>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Образование</p>
-						<select class="full" name="education">
-							<option>Неполное среднее</option>
-						</select>
+				<form class="form11">
+					<h2>Занятость и доходы1</h2>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="form-title">Образование</p>
+							<select class="full" name="education" required>
+								<option>Неполное среднее</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Занятость</p>
-						<select class="full" name="occupation">
-							<option>Безработный</option>
-						</select>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="form-title">Занятость</p>
+							<select class="full" name="occupation" required>
+								<option>Безработный</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Ваш ежемесячный доход</p>
-						<select class="full" name="income">
-							<option>Менее 10 000</option>
-						</select>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="form-title">Ваш ежемесячный доход</p>
+							<select class="full" name="income" required>
+								<option>Менее 10 000</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div class="row mbn">
-					<div class="col-xs-12">
-						<p class="form-title">Дата следующей зарплаты(приблизительно)</p>
+					<div class="row mbn">
+						<div class="col-xs-12">
+							<p class="form-title">Дата следующей зарплаты(приблизительно)</p>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-3">
-						<select class="full" name="salary1">
-							<option>01</option>
-						</select>
+					<div class="dateRow dateRow3">
+						<div class="dateRow_first">
+							<select class="full date1" name="salary1" required>
+								<option>01</option>
+							</select>
+						</div>
+						<div class="dateRow_second">
+							<select class="full" name="salary2" required>
+								<option>Месяц</option>
+							</select>
+						</div>
+						<div class="dateRow_third">
+							<select class="full" name="salary3" required>
+								<option>Год</option>
+								<option>1999</option>
+								<option>2014</option>
+							</select>
+						</div>
 					</div>
-					<div class="col-xs-5">
-						<select class="full" name="salary2">
-							<option>Месяц</option>
-						</select>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="form-title">Недвижимость в собственности</p>
+							<select class="full" name="realty" required>
+								<option> </option>
+								<option>1</option>
+							</select>
+						</div>
 					</div>
-					<div class="col-xs-4 tar">
-						<select name="salary3" name="salary3">
-							<option>Год</option>
-							<option>1999</option>
-							<option>2014</option>
-						</select>
+					<div class="row">
+						<div class="col-xs-10">
+							<p class="form-title">Ежемесячные расходы по кредиту</p>
+							<div class="pseudoRub">
+								<select class="full" name="exps" required>
+									<option>5 000</option>
+								</select>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p class="form-title">Недвижимость в собственности</p>
-						<select class="full" name="realty">
-							<option> </option>
-							<option>1</option>
-						</select>
+					<div class="row">
+						<div class="col-xs-12 further">
+							<a href="#">Назад</a>
+							<button class="btn btn-green btn-submit">Далее</button>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-10">
-						<p class="form-title">Ежемесячные расходы по кредиту</p>
-						<select class="full" name="exps">
-							<option>5 000</option>
-						</select>
-					</div>
-					<div class="col-xs-2 pln pt8">
-						<p class="form-title">&nbsp;</p>
-						Руб.
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 further">
-						<a href="#">Назад</a>
-						<button class="btn btn-green btn-submit">Далее</button>
-					</div>
-				</div>
+				</form>
 			</div> 
 		</div> 
 		<footer id="footer"> 
