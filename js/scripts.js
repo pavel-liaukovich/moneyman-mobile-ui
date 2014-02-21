@@ -155,11 +155,9 @@ $(function() {
 			return /^[А-яЁё0-9-\/]+$/.test(value);
 
 	}, 'Пожалуйста, используйте: русские символы, цифры и символы: "-", "/".');
-});
 
 
 
-$(function() {
 
 	//validation
 	;(function () {
@@ -285,10 +283,12 @@ $(function() {
 		$('.form23').validate({
 			rules: {
 				zaimSumm: {
-					digits: true
+					digits: true,
+					tel: false
 				},
 				zaimTime: {
-					digits: true
+					digits: true,
+					tel: false
 				}
 			},
 			submitHandler: function(form) {
@@ -306,6 +306,24 @@ $(function() {
 				// form.submit();
 			}
 		});
+		$('.form31').validate({
+			rules: {
+				zaimSumm: {
+					digits: true,
+					tel: false
+				},
+				zaimTime: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form) {
+				// var s = $(form).serializeArray();
+				// console.log(s)
+				// alert( 'go ajax 22' )
+				// form.submit();
+			}
+		});
 	})();
 	//\validation	
 
@@ -316,13 +334,14 @@ $(function() {
 	if($('.tel').length) {
 		$(".tel").inputmask({"mask": masks.tel});
 	}
+	//\input mask
 
-	//14 hide adress block
+	//14(not only 14) hide adress block
 	$('#fact_adr, #emp').on('change', function () {
 		$('.blockHide').slideToggle('fast');
 	})
 
-	//22
+	//22 page
 	if($('.sect').length) {
 		var sects = $('.sect').hide(),
 			radio = $('[name="obtaining"]');
@@ -390,50 +409,83 @@ $(function() {
 		  source: window[$(this).data('source')]
 		});
 	});
+	//\autocomplete
 	
-	//sliders 23
-	if($('#slider1').length) {
-		 $( "#slider1" ).slider({
-			range: "min",
-			value: 37,
-			min: 1500,
-			max: 15000,
-			slide: function( event, ui ) {
-				$('.slider1').val(ui.value);
-			}
-		});
+	//sliders 23/main
+	;(function () {
+		if($('#slider1').length) {
+			 $( "#slider1" ).slider({
+				range: "min",
+				value: 37,
+				min: 1500,
+				max: 15000,
+				step: 100,
+				slide: function( event, ui ) {
+					$('.slider1').val(ui.value);
+					if(!window.userLogin && ui.value > 8000) {
+						$('.slider1').val(8000);
+						$('#slider1').addClass('yellow');
+					} else {
+						$('#slider1').removeClass('yellow');
+					}
+					setZaim();
+				}
+			});
 
-		 $('.slider1').on('input', function () {
-			$( "#slider1" ).slider( "value", $(this).val() );
-		 })
-		 $('.slider1').on('blur', function () {
-			var val = $(this).val();
-			if(val < 1500) {
-				$(this).val(1500)
-			} else if(val > 15000) {
-				$(this).val(15000)
-			}
-		 });
+			 $('.slider1').on('input', function () {
+				$( "#slider1" ).slider( "value", $(this).val() );
+				setZaim();
+			 })
+			 $('.slider1').on('blur', function () {
+				var val = $(this).val();
+				if(val < 1500) {
+					$(this).val(1500)
+				} else if(val > 15000) {
+					$(this).val(15000)
+				}
+
+				if(!window.userLogin && val > 8000) {
+					$('.slider1').val(8000);
+					$( "#slider1" ).slider( "value", 8000 );
+					$('#slider1').addClass('yellow');
+				} else {
+					$('#slider1').removeClass('yellow');
+				}
+				setZaim();
+			 });
+		}
+	})();
+	function setZaim() {
+		var span = $('.setZaim'),
+			val = $('.slider1').val(),
+			time = $('.slider2').val(),
+			perc,
+			itogo;
+
+		if(time <=7) {
+			perc = 2.5
+		} else if(time == 8) {
+			perc = 2.4
+		} else if(time == 9) {
+			perc = 2.3
+		} else if(time == 10) {
+			perc = 2.2
+		} else if(time == 11) {
+			perc = 2.1
+		} else if(time >= 12) {
+			perc = 2
+		}
+
+		var itogo = +val + Math.round(val*0.01*perc*time);
+		span.text(itogo);
 	}
 	
-	(function () {
+	;(function () {
 		var getFullYear = $('.getFullYear'),
 			getMonth = $('.getMonth'),
 			getDate = $('.getDate');
 
-		var dateObj = new Date(),
-			year = dateObj.getFullYear(),
-			month = dateObj.getMonth(),
-			date = dateObj.getDate();
-
-		var monthText = ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря']
-		getFullYear.text(year);
-		getMonth.text(monthText[month]);
-		getDate.text(date);
-
-
-
-
+		var monthText = ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'];
 
 		if($('#slider2').length) {
 			 $( "#slider2" ).slider({
@@ -443,20 +495,19 @@ $(function() {
 				max: 31,
 				slide: function( event, ui ) {
 					$('.slider2').val(ui.value);
+					setDate(ui.value);
 
-					// var d = new Date();
-					// d.setDate(d.getDate() + ui.value);
-
-					// getFullYear.text(d.getFullYear());
-					// getMonth.text(monthText[d.getMonth()]);
-					// getDate.text(d.getDate());
+					setZaim();
 				}
 			});
 
 
-			 $('.slider2').on('input', function () {
+			$('.slider2').on('input', function () {
 				$( "#slider2" ).slider( "value", $(this).val() );
-			 })
+				setDate(+$(this).val());
+				setZaim();
+			})
+
 			 $('.slider2').on('blur', function () {
 				var val = $(this).val();
 				if(val < 5) {
@@ -464,7 +515,31 @@ $(function() {
 				} else if(val > 31) {
 					$(this).val(31)
 				}
+				setDate();
+				setZaim();
 			 });
+
+			 
+		}
+
+		function setDate(val) {
+			val = val || +$('.slider2').val();
+			var d = new Date();
+			d.setDate(d.getDate() + val);
+
+			getFullYear.text(d.getFullYear());
+			getMonth.text(monthText[d.getMonth()]);
+			getDate.text(d.getDate());
+		}
+
+		//set defaults
+		if($('.slider1').length) {
+			$('.slider1').val(1500);
+
+			$('#slider2').data('ui-slider').value(5);
+			$('.slider2').val(5);
+			setDate();
 		}
 	})();
+	//\sliders
 });
