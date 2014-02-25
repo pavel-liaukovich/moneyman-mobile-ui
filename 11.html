@@ -19,103 +19,119 @@
 	 <title>Занятость и доходы</title> 
 	</head>
 	<body>
-		<div id="wrapper" class="clearfix gray-bg"> 
-			<header id="header"> 
-				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
-				<a class="menuButton"></a>
-				<table class="headerTabs">
-					<tr>
-						<td class="active">
-							<a href="#">Информация о вас</a>
-						</td>
-						<td>
-							<a href="#">Подтверждение</a>
-						</td>
-						<td>
-							<a href="#">Перевод</a>
-						</td>
-					</tr>
-				</table>
-			</header> 
-			<div id="body" class="container-fluid gray form">
-				<form class="form11">
-					<h2>Занятость и доходы1</h2>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Образование</p>
-							<select class="full" name="education" required>
-								<option>Неполное среднее</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Занятость</p>
-							<select class="full" name="occupation" required>
-								<option>Безработный</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Ваш ежемесячный доход</p>
-							<select class="full" name="income" required>
-								<option>Менее 10 000</option>
-							</select>
-						</div>
-					</div>
-					<div class="row mbn">
-						<div class="col-xs-12">
-							<p class="form-title">Дата следующей зарплаты(приблизительно)</p>
-						</div>
-					</div>
-					<div class="dateRow dateRow3">
-						<div class="dateRow_first">
-							<select class="full date1" name="salary1" required>
-								<option>01</option>
-							</select>
-						</div>
-						<div class="dateRow_second">
-							<select class="full" name="salary2" required>
-								<option>Месяц</option>
-							</select>
-						</div>
-						<div class="dateRow_third">
-							<select class="full" name="salary3" required>
-								<option>Год</option>
-								<option>1999</option>
-								<option>2014</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Недвижимость в собственности</p>
-							<select class="full" name="realty" required>
-								<option> </option>
-								<option>1</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-10">
-							<p class="form-title">Ежемесячные расходы по кредиту</p>
-							<div class="pseudoRub">
-								<select class="full" name="exps" required>
-									<option>5 000</option>
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray-bg"> 
+				<header id="header"> 
+					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
+					<a class="menuButton"></a>
+					<table class="headerTabs">
+						<tr>
+							<td class="active">
+								<a href="#">Информация о вас</a>
+							</td>
+							<td>
+								<a href="#">Подтверждение</a>
+							</td>
+							<td>
+								<a href="#">Перевод</a>
+							</td>
+						</tr>
+					</table>
+				</header> 
+				<div id="body" class="container-fluid gray form">
+					<form class="form11">
+						<h2>Занятость и доходы</h2>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Образование</p>
+								<select class="full" name="education" required>
+									<option>Неполное среднее</option>
 								</select>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 further">
-							<a href="#">Назад</a>
-							<button class="btn btn-green btn-submit">Далее</button>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Занятость</p>
+								<select class="full" name="occupation" required>
+									<option>Безработный</option>
+								</select>
+							</div>
 						</div>
-					</div>
-				</form>
-			</div> 
-		</div> 
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Ваш ежемесячный доход</p>
+								<select class="full" name="income" required>
+									<option>Менее 10 000</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mbn">
+							<div class="col-xs-12">
+								<p class="form-title">Дата следующей зарплаты(приблизительно)</p>
+							</div>
+						</div>
+						<div class="dateRow dateRow3">
+							<div class="dateRow_first">
+								<select class="full date1" name="salary1" required>
+									<option>01</option>
+								</select>
+							</div>
+							<div class="dateRow_second">
+								<select class="full" name="salary2" required>
+									<option>Месяц</option>
+								</select>
+							</div>
+							<div class="dateRow_third">
+								<select class="full" name="salary3" required>
+									<option>Год</option>
+									<option>1999</option>
+									<option>2014</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Недвижимость в собственности</p>
+								<select class="full" name="realty" required>
+									<option> </option>
+									<option>1</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10">
+								<p class="form-title">Ежемесячные расходы по кредиту</p>
+								<div class="pseudoRub">
+									<select class="full" name="exps" required>
+										<option>5 000</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 further">
+								<a href="#">Назад</a>
+								<button class="btn btn-green btn-submit">Далее</button>
+							</div>
+						</div>
+					</form>
+				</div> 
+			</div>
+		</div>
 		<footer id="footer"> 
 			<a href="#">Полная версия сайта</a>
 			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>

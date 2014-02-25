@@ -19,114 +19,132 @@
 	 <title>Подтверждение оферты</title> 
 	</head> 
 	<body> 
-		<div id="wrapper" class="clearfix gray-bg gray"> 
-			<header id="header"> 
-				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
-				<a class="menuButton"></a>
-				<table class="headerTabs">
-					<tr>
-						<td class="active">
-							<a href="#">Информация о вас</a>
-						</td>
-						<td>
-							<a href="#">Подтверждение</a>
-						</td>
-						<td>
-							<a href="#">Перевод</a>
-						</td>
-					</tr>
-				</table>
-			</header> 
-			<div id="body" class="container-fluid form" style="padding-bottom:109px;">
-				<form action="" class="form23">
-					<h2>Подтверждение оферты</h2>
-					<div class="row">
-						<div class="col-xs-8">
-							<span class="grayDark fsz18">Сумма желаемого займа</span> (руб.)
-						</div>
-						<div class="col-xs-4">
-							<input type="tel" name="zaimSumm" class="full slider1 tac" value="1500" />
-						</div>
-					</div>
-					<div class="sliderWrap">
-						<span class="sliderWrap_less">1500</span>
-						<span class="sliderWrap_more">15 000</span>
-						<div class="slider" id="slider1"></div>
-					</div>
-
-					<div class="row">
-						<div class="col-xs-9">
-							<span class="grayDark fsz18">Срок желаемого займа</span> (дней.)
-						</div>
-						<div class="col-xs-3">
-							<input type="tel" name="zaimTime" class="full slider2" value="31" />
-						</div>
-					</div>
-					<div class="sliderWrap sliderWrap2">
-						<span class="sliderWrap_less">5</span>
-						<span class="sliderWrap_more">31</span>
-						<div class="slider" id="slider2"></div>
-					</div>
-					<hr class="marg" />
-					<div class="row returnWrap">
-						<div class="col-xs-5 return1">
-							Вернуть <br />
-							<b><span class="setZaim"></span> руб.</b>
-						</div>
-						<div class="col-xs-7 return2">
-							Дата <br />
-							<b><span class="getDate"></span> <span class="getMonth"></span> <span class="getFullYear"></span></b>
-						</div>
-					</div>
-					<div class="bg-white">
-						<div class="oferta">
-							<p class="fwb mb20">Оферта на предоставление займа</p>
-							
-							Я Старков Игорь Андреевич
-							Специальный код 45566
-							Паспорт серия номер 7305 395 748
-							Выдан: г. Ульяновск.
-							Дата выдачи: 13.12.2013
-							Зарегестрирован по следующему 
-							адресу: 354000, Россия, г.Сочи
-							ул. Дагомысская д. 30/1 кв.1
-							Номер мобильного телефона:
-							8 988 508 26 28. 
-							Адресс электронной почты: starkov.igor@gmail.com
-							Я Старков Игорь Андреевич
-							Специальный код 45566
-							Паспорт серия номер 7305 395 748
-							Выдан: г. Ульяновск.
-							Дата выдачи: 13.12.2013
-							Зарегестрирован по следующему 
-							адресу: 354000, Россия, г.Сочи
-							ул. Дагомысская д. 30/1 кв.1
-							Номер мобильного телефона:
-							8 988 508 26 28. 
-							Адресс электронной почты: starkov.igor@gmail.com
-						</div>
-						<div class="smallText mt25 mb25">
-							На номер вашего мобильного телефона отправлен одноразовый код. Код действителен 2 часа. Введя одноразовый код, Вы подтверждаете свое согласие 
-							с условиями оферты.
-						</div>
-						<button type="button" class="btn btn-green btn-submit mb20">
-							Подтвердить
-						</button>
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray-bg gray"> 
+				<header id="header"> 
+					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
+					<a class="menuButton"></a>
+					<table class="headerTabs">
+						<tr>
+							<td class="active">
+								<a href="#">Информация о вас</a>
+							</td>
+							<td>
+								<a href="#">Подтверждение</a>
+							</td>
+							<td>
+								<a href="#">Перевод</a>
+							</td>
+						</tr>
+					</table>
+				</header> 
+				<div id="body" class="container-fluid form" style="padding-bottom:109px;">
+					<form action="" class="form23">
+						<h2>Подтверждение оферты</h2>
 						<div class="row">
-							<div class="col-xs-6">
-								<div class="form-title">Код из SMS</div>
-								<input type="text" class="full" />
+							<div class="col-xs-8">
+								<span class="grayDark fsz18">Сумма займа, руб.</span>
 							</div>
-							<div class="col-xs-6">
-								<div class="form-title">&nbsp;</div>
-								<button class="btn btn-green btn-submit full">Далее</button>
+							<div class="col-xs-4">
+								<input type="tel" name="zaimSumm" class="full slider1 tac" value="1500" />
 							</div>
 						</div>
-						<a href="#" class="dashedLink">Получить код повторно</a>
-					</div>
-				</form>
-			</div> 
-		</div> 
+						<div class="sliderWrap">
+							<span class="sliderWrap_less">1500</span>
+							<span class="sliderWrap_more">15 000</span>
+							<div class="slider" id="slider1"></div>
+						</div>
+			
+						<div class="row">
+							<div class="col-xs-9">
+								<span class="grayDark fsz18">Срок займа, дней</span>
+							</div>
+							<div class="col-xs-3">
+								<input type="tel" name="zaimTime" class="full slider2" value="31" />
+							</div>
+						</div>
+						<div class="sliderWrap sliderWrap2">
+							<span class="sliderWrap_less">5</span>
+							<span class="sliderWrap_more">31</span>
+							<div class="slider" id="slider2"></div>
+						</div>
+						<hr class="marg" />
+						<div class="row returnWrap">
+							<div class="col-xs-5 return1">
+								Вернуть <br />
+								<b><span class="setZaim"></span> руб.</b>
+							</div>
+							<div class="col-xs-7 return2">
+								Дата <br />
+								<b><span class="getDate"></span> <span class="getMonth"></span> <span class="getFullYear"></span></b>
+							</div>
+						</div>
+						<div class="bg-white">
+							<div class="oferta">
+								<p class="fwb mb20">Оферта на предоставление займа</p>
+								
+								Я Старков Игорь Андреевич
+								Специальный код 45566
+								Паспорт серия номер 7305 395 748
+								Выдан: г. Ульяновск.
+								Дата выдачи: 13.12.2013
+								Зарегестрирован по следующему 
+								адресу: 354000, Россия, г.Сочи
+								ул. Дагомысская д. 30/1 кв.1
+								Номер мобильного телефона:
+								8 988 508 26 28. 
+								Адресс электронной почты: starkov.igor@gmail.com
+								Я Старков Игорь Андреевич
+								Специальный код 45566
+								Паспорт серия номер 7305 395 748
+								Выдан: г. Ульяновск.
+								Дата выдачи: 13.12.2013
+								Зарегестрирован по следующему 
+								адресу: 354000, Россия, г.Сочи
+								ул. Дагомысская д. 30/1 кв.1
+								Номер мобильного телефона:
+								8 988 508 26 28. 
+								Адресс электронной почты: starkov.igor@gmail.com
+							</div>
+							<div class="smallText mt25 mb25">
+								На номер вашего мобильного телефона отправлен одноразовый код. Код действителен 2 часа. Введя одноразовый код, Вы подтверждаете свое согласие 
+								с условиями оферты.
+							</div>
+							<button type="button" class="btn btn-green mb20 btn23">
+								Подтвердить
+							</button>
+							<div class="sms23">
+								<div class="row">
+									<div class="col-xs-6">
+										<div class="form-title">Код из SMS</div>
+										<input type="text" class="full" />
+									</div>
+									<div class="col-xs-6">
+										<div class="form-title">&nbsp;</div>
+										<button class="btn btn-green btn-submit full">Далее</button>
+									</div>
+								</div>
+								<a href="#" class="dashedLink">Получить код повторно</a>
+							</div>
+						</div>
+					</form>
+				</div> 
+			</div>
+		</div>
 		<footer id="footer"> 
 			<a href="#">Полная версия сайта</a>
 			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>

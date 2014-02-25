@@ -18,202 +18,218 @@
 	 <title>Паспортные данные</title> 
 	</head> 
 	<body> 
-		<div id="wrapper" class="clearfix gray-bg">
-			<header id="header"> 
-				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
-				<a class="menuButton"></a>
-				<table class="headerTabs">
-					<tr>
-						<td class="active">
-							<a href="#">Информация о вас</a>
-						</td>
-						<td>
-							<a href="#">Подтверждение</a>
-						</td>
-						<td>
-							<a href="#">Перевод</a>
-						</td>
-					</tr>
-				</table>
-			</header> 
-			<div id="body" class="container-fluid gray form">
-				<form action="" class="form13">
-					<h2>Паспортные данные</h2>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Фамилия</p>
-							<input type="text" name="lastName" class="full"  />
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray-bg">
+				<header id="header"> 
+					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
+					<a class="menuButton"></a>
+					<table class="headerTabs">
+						<tr>
+							<td class="active">
+								<a href="#">Информация о вас</a>
+							</td>
+							<td>
+								<a href="#">Подтверждение</a>
+							</td>
+							<td>
+								<a href="#">Перевод</a>
+							</td>
+						</tr>
+					</table>
+				</header> 
+				<div id="body" class="container-fluid gray form">
+					<form action="" class="form13">
+						<h2>Паспортные данные</h2>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Фамилия</p>
+								<input type="text" name="lastName" class="full"  />
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Имя</p>
-							<input type="text" name="name" class="full"  />
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Имя</p>
+								<input type="text" name="name" class="full"  />
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Отчество</p>
-							<input type="text" name="patronymic" class="full"  />
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Отчество</p>
+								<input type="text" name="patronymic" class="full"  />
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Пол</p>
-							<input type="radio" class="novalid styled" name="gender" id="gender1" checked /><label for="gender1" class="mr10">Мужской</label>
-							<input type="radio" class="novalid styled" name="gender" id="gender2" /><label for="gender2">Женский</label>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Пол</p>
+								<input type="radio" class="novalid styled" name="gender" id="gender1" checked /><label for="gender1" class="mr10">Мужской</label>
+								<input type="radio" class="novalid styled" name="gender" id="gender2" /><label for="gender2">Женский</label>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Дата рождения</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Дата рождения</p>
+							</div>
 						</div>
-					</div>
-					<div class="dateRow dateRow3">
-						<div class="dateRow_first">
-							<select class="full date1" name="birthdate1" required>
-								<option>01</option>
-							</select>
+						<div class="dateRow dateRow3">
+							<div class="dateRow_first">
+								<select class="full date1" name="birthdate1" required>
+									<option>01</option>
+								</select>
+							</div>
+							<div class="dateRow_second">
+								<select class="full" name="birthdate2" required>
+									<option>Января</option>
+								</select>
+							</div>
+							<div class="dateRow_third">
+								<select name="birthdate3" required>
+									<option>1980</option>
+								</select>
+							</div>
 						</div>
-						<div class="dateRow_second">
-							<select class="full" name="birthdate2" required>
-								<option>Января</option>
-							</select>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Место рождения</p>
+								<input type="text" name="birthplace" class="full">
+							</div>
 						</div>
-						<div class="dateRow_third">
-							<select name="birthdate3" required>
-								<option>1980</option>
-							</select>
+						<div class="row">
+							<div class="col-xs-5">
+								<p class="form-title">Серия</p>
+								<input type="tel" name="pass_series" class="full" maxlength="4" data-valid="digits">
+							</div>
+							<div class="col-xs-5">
+								<p class="form-title">№ паспорта</p>
+								<input type="tel" name="pass_nomer" class="full" maxlength="6" data-valid="digits">
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Место рождения</p>
-							<input type="text" name="birthplace" class="full">
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Дата выдачи</p>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-5">
-							<p class="form-title">Серия</p>
-							<input type="text" name="pass_series" class="full" maxlength="4" data-valid="digits">
+						<div class="dateRow dateRow3">
+							<div class="dateRow_first">
+								<select name="pass_ext1" class="full date1" required>
+									<option>01</option>
+								</select>
+							</div>
+							<div class="dateRow_second">
+								<select class="full" name="pass_ext2" required>
+									<option>Января</option>
+								</select>
+							</div>
+							<div class="dateRow_third">
+								<select name="pass_ext3" required>
+									<option>1980</option>
+								</select>
+							</div>
 						</div>
-						<div class="col-xs-5">
-							<p class="form-title">№ паспорта</p>
-							<input type="text" name="pass_nomer" class="full" maxlength="6" data-valid="digits">
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Кем выдан</p>
+								<input type="text" class="full" name="pass_who" required>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Дата выдачи</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Регион прописки</p>
+								<input type="text" name="reg1" class="full autocomplete" data-source="region" required>
+							</div>
 						</div>
-					</div>
-					<div class="dateRow dateRow3">
-						<div class="dateRow_first">
-							<select name="pass_ext1" class="full date1" required>
-								<option>01</option>
-							</select>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Район (поселок, деревня, село)</p>
+								<input type="text" name="reg2" class="full autocomplete" data-source="region" required>
+							</div>
 						</div>
-						<div class="dateRow_second">
-							<select class="full" name="pass_ext2" required>
-								<option>Января</option>
-							</select>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Город</p>
+								<input type="text" name="reg3" class="full autocomplete" data-source="region" required>
+							</div>
 						</div>
-						<div class="dateRow_third">
-							<select name="pass_ext3" required>
-								<option>1980</option>
-							</select>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Населенный пункт</p>
+								<input type="text" name="reg4" class="full autocomplete" data-source="region" required>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Кем выдан</p>
-							<input type="text" class="full" name="pass_who" required>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Улица</p>
+								<input type="text" name="reg5" class="full autocomplete" data-source="region" required>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Регион прописки</p>
-							<input type="text" name="reg1" class="full autocomplete" data-source="region" required>
+						<div class="row">
+							<div class="col-xs-3">
+								<p class="form-title">Дом</p>
+								<input type="text" name="reg6" maxlength="7" class="full" required />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Стр.</p>
+								<input type="text" name="reg7" maxlength="4" class="full" required />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Корп.</p>
+								<input type="text" name="reg8" maxlength="4" class="full" required />
+							</div>
+							<div class="col-xs-3">
+								<p class="form-title">Кв.</p>
+								<input type="text" name="reg9" class="full" maxlength="4" required />
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Район (поселок, деревня, село)</p>
-							<input type="text" name="reg2" class="full autocomplete" data-source="region" required>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Домашний телефон</p>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Город</p>
-							<input type="text" name="reg3" class="full autocomplete" data-source="region" required>
+						<div class="row">
+							<div class="col-xs-1 prn pt8" style="margin-right:-5px;">
+								<b>+7</b>
+							</div>
+							<div class="col-xs-11">
+								<input type="tel" name="phone_home" class="full tel" placeholder="(___)___-__-__" />
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Населенный пункт</p>
-							<input type="text" name="reg4" class="full autocomplete" data-source="region" required>
+						<div class="row">
+							<div class="col-xs-8">
+								<p class="form-title">Семейное положение</p>
+								<select class="full" name="family" required>
+									<option>Холост</option>
+								</select>
+							</div>
+							<div class="col-xs-4">
+								<p class="form-title">Дети</p>
+								<select class="full" required>
+									<option>нет</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Улица</p>
-							<input type="text" name="reg5" class="full autocomplete" data-source="region" required>
+						<div class="row">
+							<div class="col-xs-12 further">
+								<a href="#">Назад</a>
+								<button class="btn btn-green btn-submit">Далее</button>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-3">
-							<p class="form-title">Дом</p>
-							<input type="text" name="reg6" maxlength="7" class="full" required />
-						</div>
-						<div class="col-xs-3">
-							<p class="form-title">Стр.</p>
-							<input type="text" name="reg7" maxlength="4" class="full" required />
-						</div>
-						<div class="col-xs-3">
-							<p class="form-title">Корп.</p>
-							<input type="text" name="reg8" maxlength="4" class="full" required />
-						</div>
-						<div class="col-xs-3">
-							<p class="form-title">Кв.</p>
-							<input type="text" name="reg9" class="full" maxlength="4" required />
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p class="form-title">Домашний телефон</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-1 prn pt8" style="margin-right:-5px;">
-							<b>+7</b>
-						</div>
-						<div class="col-xs-11">
-							<input type="tel" name="phone_home" class="full tel" placeholder="(___)___-__-__" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-8">
-							<p class="form-title">Семейное положение</p>
-							<select class="full" name="family" required>
-								<option>Холост</option>
-							</select>
-						</div>
-						<div class="col-xs-4">
-							<p class="form-title">Дети</p>
-							<select class="full" required>
-								<option>нет</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 further">
-							<a href="#">Назад</a>
-							<button class="btn btn-green btn-submit">Далее</button>
-						</div>
-					</div>
-				</form>
-			</div> 
-		</div> 
+					</form>
+				</div> 
+			</div>
+		</div>
 		<footer id="footer"> 
 			<a href="#">Полная версия сайта</a>
 			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>

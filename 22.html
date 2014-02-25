@@ -19,135 +19,151 @@
 	 <title>Заявка на микрозаем.</title> 
 	</head>
 	<body>
-		<div id="wrapper" class="clearfix gray-bg"> 
-			<header id="header"> 
-				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
-				<a class="menuButton"></a>
-				<table class="headerTabs">
-					<tr>
-						<td class="active">
-							<a href="#">Информация о вас</a>
-						</td>
-						<td>
-							<a href="#">Подтверждение</a>
-						</td>
-						<td>
-							<a href="#">Перевод</a>
-						</td>
-					</tr>
-				</table>
-			</header> 
-			<div id="body" class="container-fluid form gray microloan">
-				<form action="" class="form22">
-					<h2>Заявка на микрозаем.<br />
-						Как вы желаете получить
-						деньги?
-					</h2>
-					<div class="labelWrap">
-						<input type="radio" name="obtaining" value="1" class="styled sectRadio" id="obtaining" checked />
-						<label for="obtaining" class="grayDark">
-							На банковский счет, кредитную <br />
-							или зарплатную карту
-						</label>
-					</div>
-					<div class="sect">
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Номер вашего банковского счета</p>
-								<input type="text" name="bank_nomer" class="full" required>
-							</div>
-						</div>
-						<p class="form-title">Бик банка, в котором открыт счет</p>
-						<div class="row">
-							<div class="col-xs-5">
-							<input type="text" name="bank_bik" maxlength="9" class="full">
-							</div>
-						</div>
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray-bg"> 
+				<header id="header"> 
+					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
+					<a class="menuButton"></a>
+					<table class="headerTabs">
+						<tr>
+							<td class="active">
+								<a href="#">Информация о вас</a>
+							</td>
+							<td>
+								<a href="#">Подтверждение</a>
+							</td>
+							<td>
+								<a href="#">Перевод</a>
+							</td>
+						</tr>
+					</table>
+				</header> 
+				<div id="body" class="container-fluid form gray microloan">
+					<form action="" class="form22">
+						<h2>Заявка на микрозаем.<br />
+							Как вы желаете получить
+							деньги?
+						</h2>
 						<div class="labelWrap">
-							<input type="checkbox" name="emp" class="styled novalid" id="emp" />
-							<label for="emp" class="grayDark">
-								Счет мне открыл работодатель
+							<input type="radio" name="obtaining" value="1" class="styled sectRadio" id="obtaining" />
+							<label for="obtaining" class="grayDark">
+								На банковский счет, кредитную <br />
+								или зарплатную карту
 							</label>
 						</div>
-						<div class="blockHide dn">
-							<p class="form-title">Номер банковской карты</p>
+						<div class="sect">
 							<div class="row">
-								<div class="col-xs-3">
-									<input type="text" class="full" maxlength="19" name="bank_no1">
-								</div>
-								<div class="col-xs-3">
-									<input type="text" class="full" maxlength="19" name="bank_no2">
-								</div>
-								<div class="col-xs-3">
-									<input type="text" class="full" maxlength="19" name="bank_no3">
-								</div>
-								<div class="col-xs-3">
-									<input type="text" class="full" maxlength="19" name="bank_no4">
+								<div class="col-xs-12">
+									<p class="form-title">Номер вашего банковского счета</p>
+									<input type="tel" name="bank_nomer" class="full" required>
 								</div>
 							</div>
-						</div>
-						<p class="smallText">
-							Пожалуйста, обратите внимание, указанный банковский счет должен принадлежать именно вам. Все паспортные данные владельца счета должны полностью совпадать с данными, указанными на первом шаге оформления займа. 
-						</p>
-						<p class="smallText">
-							Если вы укажете номер счета другого человека, банк не сможет принять платеж и вы не получите деньги.
-						</p>
-					</div>
-					<hr class="marg" />
-					<div class="labelWrap">
-						<input type="radio" name="obtaining" value="2" class="styled sectRadio" id="obtaining2" />
-						<label for="obtaining2" class="grayDark">
-							На яндекс кошелек
-						</label>
-					</div>
-					<div class="sect">
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Номер вашего яндекс кошелька</p>
-								<input type="text" name="yaPocket" class="full" maxlength="15">
+							<p class="form-title">Бик банка, в котором открыт счет</p>
+							<div class="row">
+								<div class="col-xs-5">
+								<input type="tel" name="bank_bik" maxlength="9" class="full">
+								</div>
 							</div>
+							<div class="labelWrap">
+								<input type="checkbox" name="emp" class="styled novalid" id="emp" />
+								<label for="emp" class="grayDark">
+									Счет мне открыл работодатель
+								</label>
+							</div>
+							<div class="blockHide dn">
+								<p class="form-title">Номер банковской карты</p>
+								<div class="row">
+									<div class="col-xs-3">
+										<input type="text" class="full" maxlength="19" name="bank_no1">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="full" maxlength="19" name="bank_no2">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="full" maxlength="19" name="bank_no3">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="full" maxlength="19" name="bank_no4">
+									</div>
+								</div>
+							</div>
+							<p class="smallText">
+								Пожалуйста, обратите внимание, указанный банковский счет должен принадлежать именно вам. Все паспортные данные владельца счета должны полностью совпадать с данными, указанными на первом шаге оформления займа. 
+							</p>
+							<p class="smallText">
+								Если вы укажете номер счета другого человека, банк не сможет принять платеж и вы не получите деньги.
+							</p>
 						</div>
+						<hr class="marg" />
 						<div class="labelWrap">
-							<input type="checkbox" name="yaLic" class="styled novalid" id="yaLic" />
-							<label for="yaLic" class="grayDark">
-								Я ознакомлен и принимаю <a href="#">правила</a><br />
-								проведения операций
+							<input type="radio" name="obtaining" value="2" class="styled sectRadio" id="obtaining2" />
+							<label for="obtaining2" class="grayDark">
+								На яндекс кошелек
 							</label>
 						</div>
-						<p class="smallText">
-							Указанный номер кошелька должен принадлежать именно вам и быть <a href="#">идентифицирован</a>
-						</p>
-						<div class="smallText">
-							Все паспортные данные владельца кошелька должны полностью совпадать с данными, указаными на первом шаге оформления займа. Если вы укажете номер кошелька другого человека, то деньги не будут перечислены.
+						<div class="sect">
+							<div class="row">
+								<div class="col-xs-12">
+									<p class="form-title">Номер вашего яндекс кошелька</p>
+									<input type="tel" name="yaPocket" class="full" maxlength="15">
+								</div>
+							</div>
+							<div class="labelWrap">
+								<input type="checkbox" name="yaLic" class="styled novalid" id="yaLic" />
+								<label for="yaLic" class="grayDark">
+									Я ознакомлен и принимаю <a href="#">правила</a>
+									проведения операций
+								</label>
+							</div>
+							<p class="smallText">
+								Указанный номер кошелька должен принадлежать именно вам и быть <a href="#">идентифицирован</a>
+							</p>
+							<div class="smallText">
+								Все паспортные данные владельца кошелька должны полностью совпадать с данными, указаными на первом шаге оформления займа. Если вы укажете номер кошелька другого человека, то деньги не будут перечислены.
+							</div>
 						</div>
-					</div>
-					<hr class="marg" />
-					<div class="labelWrap">
-						<input type="radio" name="obtaining" value="3" class="styled sectRadio" id="obtaining3" />
-						<label for="obtaining3" class="grayDark">
-							Наличными, через платежную систему Contact(Контакт)
-						</label>
-					</div>
-					<div class="sect">
-						<div class="smallText">
-							Вы можете получить сумму наличными в удобном для вас месте сразу после одобрения займа. Банковская система “Контакт” насчитывает свыше 14 000 отделений по всей России.
+						<hr class="marg" />
+						<div class="labelWrap">
+							<input type="radio" name="obtaining" value="3" class="styled sectRadio" id="obtaining3" />
+							<label for="obtaining3" class="grayDark">
+								Наличными, через платежную систему Contact(Контакт)
+							</label>
 						</div>
-						<div class="smallText">
-							Чтобы получить деньги в отделении у операциониста. при себе необходимо будет иметь пасспорт и номер перевода.
+						<div class="sect">
+							<div class="smallText">
+								Вы можете получить сумму наличными в удобном для вас месте сразу после одобрения займа. Банковская система “Контакт” насчитывает свыше 14 000 отделений по всей России.
+							</div>
+							<div class="smallText">
+								Чтобы получить деньги в отделении у операциониста. при себе необходимо будет иметь пасспорт и номер перевода.
+							</div>
+							<div class="smallText">
+								Мы пришлем номер перевода на указанную вами электронную почту и мобильный телефон. Узнать номер переводаможно так же в личном кабинете Moneyman.
+							</div>
 						</div>
-						<div class="smallText">
-							Мы пришлем номер перевода на указанную вами электронную почту и мобильный телефон. Узнать номер переводаможно так же в личном кабинете Moneyman.
+						<div class="row">
+							<div class="col-xs-12 further">
+								<!-- <a href="#">Назад</a> -->
+								<button class="btn btn-green btn-submit">Далее</button>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 further">
-							<!-- <a href="#">Назад</a> -->
-							<button class="btn btn-green btn-submit">Далее</button>
-						</div>
-					</div>
-				</form>
-			</div> 
-		</div> 
+					</form>
+				</div> 
+			</div>
+		</div>
 		<footer id="footer"> 
 			<a href="#">Полная версия сайта</a>
 			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>

@@ -16,7 +16,7 @@
 
 		<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
 
-	 <title>Контактная информация</title> 
+	 <title>Главная</title> 
 	</head> 
 	<body> 
 		<div class="globalWrap gray-bg">
@@ -34,77 +34,56 @@
 					</ul>
 				</nav>
 			</div>
-			<div id="wrapper" class="clearfix gray-bg"> 
+			<div id="wrapper" class="clearfix gray-bg gray"> 
 				<header id="header"> 
 					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
 					<a class="menuButton"></a>
-					<table class="headerTabs">
-						<tr>
-							<td class="active">
-								<a href="#">Информация о вас</a>
-							</td>
-							<td>
-								<a href="#">Подтверждение</a>
-							</td>
-							<td>
-								<a href="#">Перевод</a>
-							</td>
-						</tr>
-					</table>
+					<p class="sheader_descr">Срочный микрозайм онлайн до зарплаты — это просто!</p>
 				</header> 
-				<div id="body" class="container-fluid gray form">
-					<h2>Контактная информация</h2>
-					<form action="" class="form12">
+				<div id="body" class="container-fluid form" style="padding-bottom:109px;">
+					<form action="" class="form31">
 						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Мобильный телефон</p>
+							<div class="col-xs-8">
+								<span class="grayDark fsz18">Сумма желаемого займа</span> (руб.)
+							</div>
+							<div class="col-xs-4">
+								<input type="tel" name="zaimSumm" class="full slider1 tac" value="1500" />
 							</div>
 						</div>
+						<div class="sliderWrap">
+							<span class="sliderWrap_less">1500</span>
+							<span class="sliderWrap_more">15 000</span>
+							<div class="slider" id="slider1"></div>
+						</div>
+			
 						<div class="row">
-							<div class="col-xs-1 prn pt8" style="margin-right:-5px;">
-								<b>+7</b>
+							<div class="col-xs-9">
+								<span class="grayDark fsz18">Срок желаемого займа</span> (дней.)
 							</div>
-							<div class="col-xs-11">
-								<input type="tel" name="mobile" class="full tel" placeholder="(___)___-__-__" required />
-								<button type="button" class="showPopover">Временная кнопка для показа подсказки.</button>
+							<div class="col-xs-3">
+								<input type="tel" name="zaimTime" class="full slider2" value="31" />
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Электронная почта</p>
-								<input type="email" name="email" class="full" required />
+						<div class="sliderWrap sliderWrap2">
+							<span class="sliderWrap_less">5</span>
+							<span class="sliderWrap_more">31</span>
+							<div class="slider" id="slider2"></div>
+						</div>
+						<hr class="marg" />
+						<div class="row returnWrap">
+							<div class="col-xs-5 return1">
+								Вернуть <br />
+								<b><span class="setZaim"></span> руб.</b>
+							</div>
+							<div class="col-xs-7 return2">
+								Дата <br />
+								<b><span class="getDate"></span> <span class="getMonth"></span> <span class="getFullYear"></span></b>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Придумайте секретное слово</p>
-								<input type="text" name="secret" class="full" maxlength="32" required />
-								<!-- <p>Поле обязательно для заполнения</p> -->
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-6">
-								<button type="submit" class="btn btn-green btn-submit full">Далее</button>
-							</div>
+						<div class="bg-white">
+							<button class="btn btn-red full">Оформить заем</button>
 						</div>
 					</form>
-			
-			
-					<div class="row sms_block">
-						<div class="col-xs-6">
-							<p class="form-title">Код из SMS</p>
-							<input type="text" class="novalid full" />
-						</div>
-						<div class="col-xs-6 pt8">
-							<p class="form-title">&nbsp;</p>
-							<a href="#" class="dashed fsz14">Получить код повторно</a>
-						</div>
-					</div>
-					
-					
-					
-					
-					
 				</div> 
 			</div>
 		</div>

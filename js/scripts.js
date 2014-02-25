@@ -196,9 +196,11 @@ $(function() {
 					birthplace2: true
 				},
 				pass_series: {
+					tel: false,
 					digits: true
 				},
 				pass_nomer: {
+					tel: false,
 					digits: true
 				},
 				reg6: {
@@ -254,8 +256,13 @@ $(function() {
 		});
 		$('.form22').validate({
 			rules: {
+				bank_nomer: {
+					digits: true,
+					tel: false
+				},
 				bank_bik: {
-					digits: true
+					digits: true,
+					tel: false
 				},
 				bank_no1: {
 					digits: true
@@ -270,6 +277,7 @@ $(function() {
 					digits: true
 				},
 				yaPocket: {
+					tel: false,
 					digits: true
 				}
 			},
@@ -345,7 +353,7 @@ $(function() {
 	if($('.sect').length) {
 		var sects = $('.sect').hide(),
 			radio = $('[name="obtaining"]');
-		$('.sect:first').slideToggle();
+		// $('.sect:first').slideToggle();
 
 		radio.on('change', function () {
 			sects.slideUp('fast');
@@ -411,7 +419,8 @@ $(function() {
 	});
 	//\autocomplete
 	
-	//sliders 23/main
+	//23
+	//sliders
 	;(function () {
 		if($('#slider1').length) {
 			 $( "#slider1" ).slider({
@@ -542,4 +551,139 @@ $(function() {
 		}
 	})();
 	//\sliders
+
+	//button
+
+	//\button
+	//24
+	(function () {
+		$('#credit1, #credit2').on('change', function () {
+			$('.creditQuestions').slideToggle('fast');
+		})
+	})();
+
+	//page 34, timer
+	if($('.timerWrap').length) {
+		var wrap = $('.timerWrap'),
+			timerSec1 = $('.timerSec1'),
+			timerSec2 = $('.timerSec2');
+			
+		timer(59, function () {
+			console.log('callback')
+		});
+	}
+
+	function timer(n, cb) {
+		var timer = n,
+			timertext;
+
+		if(n < 10) {
+			timerText = '0' + n;
+		} else {
+			timerText = '' + n;
+		}
+
+		timerSec1.text(timerText.slice(0,1)).data('num', timerText.slice(0,1));
+		timerSec2.text(timerText.slice(1,2)).data('num', timerText.slice(1,2));
+
+		timer--;
+
+		var interval = setInterval(function () {
+			if(timer > 0) {
+				tick(timer)
+				timer--;
+			} else {
+				tick(0)
+				clearInterval(interval);
+				cb();
+			}
+		}, 1000);
+
+		function tick(n) {
+			var timerText,
+				oldNum1,
+				oldNum2,
+				num1,
+				num2;
+
+			if(n < 10) {
+				timerText = '0' + n;
+			} else {
+				timerText = '' + n;
+			}
+
+			num1 = timerText.slice(0,1);
+			num2 = timerText.slice(1,2);
+
+			oldNum1 = timerSec1.data('num');
+			oldNum2 = timerSec2.data('num');
+
+			//num2
+			if(oldNum2 != num2) {
+				timerSec2.text(num2).data('num', num2);
+				var fakeItem = $('<span class="timerSingle timerSec2">'+oldNum2+'</span>').appendTo(wrap)
+				fakeItem[0].clientHeight;
+				fakeItem.addClass('timerAway');
+				setTimeout(function(){
+					fakeItem.remove();
+				}, 400)
+			}
+
+			//num1
+			if(oldNum1 != num1) {
+				timerSec1.text(num1).data('num', num1);
+				var fakeItem1 = $('<span class="timerSingle timerSec1">'+oldNum1+'</span>').appendTo(wrap)
+				fakeItem1[0].clientHeight;
+				fakeItem1.addClass('timerAway');
+				setTimeout(function(){
+					fakeItem1.remove();
+				}, 400)
+			}
+		}
+	}
+
+	//menu
+	(function () {
+		
+	})();
+	$('.menuButton').on('click', function () {
+		var gl = $('.globalWrap'),
+			wrap = $('#wrapper'),
+			menu = $('.menuWrap');
+
+		if(!gl.hasClass("open")) {
+			openMenu();
+		} else {
+			closeMenu();
+		}
+
+		function openMenu() {
+			gl.addClass("open");
+			setTimeout(function(){
+				wrap.on('click.menu touchmove.menu', function (e) {
+					closeMenu();
+					e.preventDefault();
+					return false;
+				})
+			}, 300)
+		}
+		function closeMenu() {
+			gl.removeClass("open");
+			wrap.off('.menu');
+		}
+
+	})
+	//\menu
+
+
+
+
+
+
+
+
+
+
+
+
 });

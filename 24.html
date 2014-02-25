@@ -17,135 +17,153 @@
 	 <title>Проверка</title> 
 	</head> 
 	<body> 
-		<div id="wrapper" class="clearfix gray-bg"> 
-			<header id="header"> 
-				<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
-				<a class="menuButton"></a>
-				<table class="headerTabs">
-					<tr>
-						<td class="active">
-							<a href="#">Информация о вас</a>
-						</td>
-						<td>
-							<a href="#">Подтверждение</a>
-						</td>
-						<td>
-							<a href="#">Перевод</a>
-						</td>
-					</tr>
-				</table>
-			</header> 
-			<div id="body" class="container-fluid form" style="padding-top:0;">
-				<form action="" class="form24">
-					<div class="bg-white pMargin">
-						<h2>Небольшая проверка, подтверждающая что вы - это вы</h2>
-						<p>
-							Мы должны быть уверены, что вы — на самом деле вы, а не мошенник, который пытается использовать ваши данные. Проверяется очень просто. Вы указываете известную только вам информацию о своих кредитах, а система сопоставляет данные с архивом кредитного бюро. Если данные совпадают — анкету заполняет честный заемщик.
-						</p>
-						<p>
-							<b>Мы сверяем информацию о ваших последних кредитах</b><br />
-							Например: ипотека, кредитные карты, потребительские кредиты, автокредиты.
-						</p>
-						<p>
-							<b>Лучше указать меньше данных, но более точно</b><br />
-							Если вы не помните точную дату — не беда. Мы идентифицируем вас по целому ряду показателей. Главное, предоставить больше деталей. Лучше указать информацию о меньшем количестве кредитов, но более точно.
-						</p>
-					</div>
-					<div class="gray">
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Сколько раз раньше вы брали <br /> кредиты в банках?</p>
-								<input type="radio" class="novalid styled" name="credits" value="0" id="credit1" checked /><label for="credit1" class="mr10">Ни разу</label>
-								<input type="radio" class="novalid styled" name="credits" value="1" id="credit2" /><label for="credit2">Один</label>
-							</div>
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray-bg"> 
+				<header id="header"> 
+					<h1 class="logo"><a href="#"><span>Money</span>Man</a></h1>
+					<a class="menuButton"></a>
+					<table class="headerTabs">
+						<tr>
+							<td class="active">
+								<a href="#">Информация о вас</a>
+							</td>
+							<td>
+								<a href="#">Подтверждение</a>
+							</td>
+							<td>
+								<a href="#">Перевод</a>
+							</td>
+						</tr>
+					</table>
+				</header> 
+				<div id="body" class="container-fluid form" style="padding-top:0;">
+					<form action="" class="form24">
+						<div class="bg-white pMargin">
+							<h2>Небольшая проверка, подтверждающая что вы - это вы</h2>
+							<p>
+								Мы должны быть уверены, что вы — на самом деле вы, а не мошенник, который пытается использовать ваши данные. Проверяется очень просто. Вы указываете известную только вам информацию о своих кредитах, а система сопоставляет данные с архивом кредитного бюро. Если данные совпадают — анкету заполняет честный заемщик.
+							</p>
+							<p>
+								<b>Мы сверяем информацию о ваших последних кредитах</b><br />
+								Например: ипотека, кредитные карты, потребительские кредиты, автокредиты.
+							</p>
+							<p>
+								<b>Лучше указать меньше данных, но более точно</b><br />
+								Если вы не помните точную дату — не беда. Мы идентифицируем вас по целому ряду показателей. Главное, предоставить больше деталей. Лучше указать информацию о меньшем количестве кредитов, но более точно.
+							</p>
 						</div>
-						<h2>Вопросы по кредиту</h2>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">В каком банке вы брали кредит</p>
-								<select class="full" required>
-									<option>Ак Барс Банк</option>
-								</select>
+						<div class="gray">
+							<div class="row">
+								<div class="col-xs-12">
+									<p class="form-title">Сколько раз раньше вы брали <br /> кредиты в банках?</p>
+									<input type="radio" class="novalid styled" name="credits" value="0" id="credit1" checked /><label for="credit1" class="mr10">Ни разу</label>
+									<input type="radio" class="novalid styled" name="credits" value="1" id="credit2" /><label for="credit2">Один</label>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Какой кредит вы брали?</p>
-								<select class="full" required>
-									<option>Автокредит</option>
-								</select>
-							</div>
-						</div>
-						<p class="form-title">Когда вы взяли кредит</p>
-						<div class="dateRow dateRow3">
-							<div class="dateRow_first">
-								<select class="full date1" name="when" required>
-									<option>01</option>
-								</select>
-							</div>
-							<div class="dateRow_second">
-								<select class="full" name="when" required>
-									<option>Января</option>
-								</select>
-							</div>
-							<div class="dateRow_third">
-								<select class="full" name="when" required>
-									<option>1980</option>
-								</select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Погашен ли кредит?</p>
-								<input type="radio" class="novalid styled" name="repay" value="1" id="credit3" checked /><label for="credit3" class="mr10">Да</label>
-								<input type="radio" class="novalid styled" name="repay" value="0" id="credit4" /><label for="credit4">нет</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">В какой валюте вы брали кредит?</p>
-								<select class="full" required>
-									<option>Российский рубль</option>
-								</select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-10">
-								<p class="form-title">На какую сумму вы брали кредит?</p>
-								<div class="pseudoRub">
-									<select class="full" name="exps" required>
-										<option>10 000</option>
-									</select>
+							<div class="creditQuestions">
+								<h2>Вопросы по кредиту</h2>
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">В каком банке вы брали кредит</p>
+										<select class="full" required>
+											<option>Ак Барс Банк</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">Какой кредит вы брали?</p>
+										<select class="full" required>
+											<option>Автокредит</option>
+										</select>
+									</div>
+								</div>
+								<p class="form-title">Когда вы взяли кредит</p>
+								<div class="dateRow dateRow3">
+									<div class="dateRow_first">
+										<select class="full date1" name="when" required>
+											<option>01</option>
+										</select>
+									</div>
+									<div class="dateRow_second">
+										<select class="full" name="when" required>
+											<option>Января</option>
+										</select>
+									</div>
+									<div class="dateRow_third">
+										<select class="full" name="when" required>
+											<option>1980</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">Погашен ли кредит?</p>
+										<input type="radio" class="novalid styled" name="repay" value="1" id="credit3" checked /><label for="credit3" class="mr10">Да</label>
+										<input type="radio" class="novalid styled" name="repay" value="0" id="credit4" /><label for="credit4">нет</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">В какой валюте вы брали кредит?</p>
+										<select class="full" required>
+											<option>Российский рубль</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-10">
+										<p class="form-title">На какую сумму вы брали кредит?</p>
+										<div class="pseudoRub">
+											<select class="full" name="exps" required>
+												<option>10 000</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-10">
+										<p class="form-title">Если у вас кредитная карта, <br />то какой на ней максимальный лимит?</p>
+										<div class="pseudoRub">
+											<select class="full" name="exps" required>
+												<option>10 000</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">Какая была максимальная просрочка <br />за все время существования <br />данного кредита?</p>
+										<select class="full" required>
+											<option>Просрочек не было</option>
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-xs-10">
-								<p class="form-title">Если у вас кредитная карта, <br />то какой на ней максимальный лимит?</p>
-								<div class="pseudoRub">
-									<select class="full" name="exps" required>
-										<option>10 000</option>
-									</select>
-								</div>
+							<div class="col-xs-12 further tal">
+								<button class="btn btn-green btn-submit">Далее</button>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<p class="form-title">Какая была максимальная просрочка <br />за все время существования <br />данного кредита?</p>
-								<select class="full" required>
-									<option>Просрочек не было</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 further tal">
-							<button class="btn btn-green btn-submit">Далее</button>
-						</div>
-					</div>
-				</form>
-			</div> 
-		</div> 
+					</form>
+				</div> 
+			</div>
+		</div>
 		<footer id="footer"> 
 			<a href="#">Полная версия сайта</a>
 			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>
