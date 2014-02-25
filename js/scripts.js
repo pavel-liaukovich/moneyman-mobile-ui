@@ -213,6 +213,7 @@ $(function() {
 					address: true,
 				},
 				reg9: {
+					tel: false,
 					digits: true,
 				},
 				phone_home: {
@@ -464,6 +465,8 @@ $(function() {
 			 });
 		}
 	})();
+
+
 	function setZaim() {
 		var span = $('.setZaim'),
 			val = $('.slider1').val(),
@@ -547,13 +550,36 @@ $(function() {
 
 			$('#slider2').data('ui-slider').value(5);
 			$('.slider2').val(5);
+			setZaim();
 			setDate();
 		}
 	})();
 	//\sliders
 
 	//button
+	(function () {
+		$('.btn23').on('click', function () {
+			$('.sms23').slideToggle("fast");
+		})
+		$('.givemecode').on('click', function (e) {
+			var timer = 59;
+			$('.btn23, .sms23').slideUp();
+			e.preventDefault();
+			var timer23 = $('<p class="timer23"></p>');
+			timer23.text('Код отправлен 59').insertBefore($('.btn23'));
 
+
+			var interval = setInterval(function () {
+				if(timer > 0) {
+					timer--;
+					timer23.text('Код отправлен '+timer)
+				} else {
+					timer23.text('Код отправлен '+timer)
+					clearInterval(interval);
+				}
+			}, 1000);
+		})
+	})();
 	//\button
 	//24
 	(function () {
@@ -671,8 +697,34 @@ $(function() {
 			gl.removeClass("open");
 			wrap.off('.menu');
 		}
-
 	})
+
+	function menuSize() {
+		$('.menuWrap nav').css({'maxHeight':$('.globalWrap').outerHeight() - 109})//109-footer height
+	}
+	menuSize();
+	$(window).on('resize', function () {
+		menuSize();
+	})
+	// function menuSize() {
+	// 	var nav = $('.menuWrap nav'),
+	// 		menuHeight = nav.outerHeight(),
+	// 		winHeight = $(window).height();
+	// 		//109 - footer height
+
+	// 	nav.css({'height':''});
+	// 	if(winHeight - 109 < menuHeight) {
+	// 		nav.height(winHeight - 109);
+	// 	}
+		
+	// 	// $('.menuWrap nav').height($(window).height() - $('#footer').outerHeight());
+	// }
+	// menuSize();
+	// $(window).on('resize', function () {
+	// 	menuSize();
+	// })
+	// $('.menuWrap').height($('.globalWrap').outerHeight() - $('#footer').outerHeight());
+	// $('.menuWrap').css('minHeight',$('.globalWrap').outerHeight() - $('#footer').outerHeight());
 	//\menu
 
 
