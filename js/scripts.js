@@ -241,6 +241,7 @@ $(function() {
 				},
 				reg9: {
 					digits: true,
+					tel: false
 				},
 			},
 			submitHandler: function(form) {
@@ -563,10 +564,11 @@ $(function() {
 		})
 		$('.givemecode').on('click', function (e) {
 			var timer = 59;
-			$('.btn23, .sms23').slideUp();
+			// $('.btn23, .sms23').slideUp();
+			$(this).slideUp('fast');
 			e.preventDefault();
 			var timer23 = $('<p class="timer23"></p>');
-			timer23.text('Код отправлен 59').insertBefore($('.btn23'));
+			timer23.text('Код отправлен 59').insertAfter($('.sms23'));
 
 
 			var interval = setInterval(function () {
@@ -576,6 +578,8 @@ $(function() {
 				} else {
 					timer23.text('Код отправлен '+timer)
 					clearInterval(interval);
+					timer23.remove();
+					$('.givemecode').slideDown();
 				}
 			}, 1000);
 		})
@@ -706,26 +710,15 @@ $(function() {
 	$(window).on('resize', function () {
 		menuSize();
 	})
-	// function menuSize() {
-	// 	var nav = $('.menuWrap nav'),
-	// 		menuHeight = nav.outerHeight(),
-	// 		winHeight = $(window).height();
-	// 		//109 - footer height
 
-	// 	nav.css({'height':''});
-	// 	if(winHeight - 109 < menuHeight) {
-	// 		nav.height(winHeight - 109);
-	// 	}
-		
-	// 	// $('.menuWrap nav').height($(window).height() - $('#footer').outerHeight());
-	// }
-	// menuSize();
-	// $(window).on('resize', function () {
-	// 	menuSize();
-	// })
-	// $('.menuWrap').height($('.globalWrap').outerHeight() - $('#footer').outerHeight());
-	// $('.menuWrap').css('minHeight',$('.globalWrap').outerHeight() - $('#footer').outerHeight());
-	//\menu
+
+
+	//42
+	;(function () {
+		$('.question_title span').on('click', function () {
+			$(this).parent().next('.question_descr').slideToggle('fast');
+		})
+	})();
 
 
 
