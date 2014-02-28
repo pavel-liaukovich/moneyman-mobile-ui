@@ -14,7 +14,7 @@
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-		<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
+		
 
 	 <title>Занятость и доходы</title> 
 	</head>
@@ -59,6 +59,7 @@
 							<div class="col-xs-12">
 								<p class="form-title">Образование</p>
 								<select class="full" name="education" required>
+									<option> </option>
 									<option>Неполное среднее</option>
 								</select>
 							</div>
@@ -67,36 +68,43 @@
 							<div class="col-xs-12">
 								<p class="form-title">Занятость</p>
 								<select class="full" name="occupation" required>
+									<option> </option>
 									<option>Безработный</option>
 								</select>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-xs-12">
+							<div class="col-xs-10">
 								<p class="form-title">Ваш ежемесячный доход</p>
-								<select class="full" name="income" required>
-									<option>Менее 10 000</option>
-								</select>
+								<div class="pseudoRub">
+									<select class="full" name="income" required>
+										<option> </option>
+										<option>10 000</option>
+									</select>
+								</div>
 							</div>
 						</div>
 						<div class="row mbn">
 							<div class="col-xs-12">
-								<p class="form-title">Дата следующей зарплаты(приблизительно)</p>
+								<p class="form-title">Дата следующей зарплаты <span class="small">(приблизительно)</span></p>
 							</div>
 						</div>
 						<div class="dateRow dateRow3">
 							<div class="dateRow_first">
 								<select class="full date1" name="salary1" required>
+									<option> </option>
 									<option>01</option>
 								</select>
 							</div>
 							<div class="dateRow_second">
 								<select class="full" name="salary2" required>
+									<option> </option>
 									<option>Месяц</option>
 								</select>
 							</div>
 							<div class="dateRow_third">
 								<select class="full" name="salary3" required>
+									<option> </option>
 									<option>Год</option>
 									<option>1999</option>
 									<option>2014</option>
@@ -117,12 +125,13 @@
 								<p class="form-title">Ежемесячные расходы по кредиту</p>
 								<div class="pseudoRub">
 									<select class="full" name="exps" required>
+										<option> </option>
 										<option>5 000</option>
 									</select>
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row mbn">
 							<div class="col-xs-12 further">
 								<a href="#">Назад</a>
 								<button class="btn btn-green btn-submit">Далее</button>
@@ -143,8 +152,8 @@
 
 
 
-		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-		<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>--> 
+		
+		
 		<script src="http://yandex.st/jquery/2.1.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
 		

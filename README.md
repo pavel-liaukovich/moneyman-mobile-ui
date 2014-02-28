@@ -1,2 +1,0 @@
-moneyman-mobile-ui
-==================
