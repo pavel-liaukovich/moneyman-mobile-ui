@@ -375,7 +375,7 @@ $(function() {
 		el.popover({
 			html: true,
 			content:'Пользователь с таким номером <br /> телефона уже зарегестрирован.<br />\
-						Чтобы оформить заявку войдите в <br /><a href="#">личный кабинет</a>',
+						Чтобы оформить заявку войдите в <a href="#">личный кабинет</a>',
 			placement: 'bottom',
 			trigger: 'manual'
 		}).popover('show');
@@ -450,18 +450,28 @@ $(function() {
 			 $('.slider1').on('blur', function () {
 				var val = $(this).val();
 				if(val < 1500) {
-					$(this).val(1500)
+					$(this).val(1500);
+					$(this).next('.error').hide();
 				} else if(val > 15000) {
 					$(this).val(15000)
 				}
 
+
+
+
 				if(!window.userLogin && val > 8000) {
 					$('.slider1').val(8000);
 					$( "#slider1" ).slider( "value", 8000 );
-					$('#slider1').addClass('yellow');
-				} else {
 					$('#slider1').removeClass('yellow');
 				}
+
+				// if(!window.userLogin && val > 8000) {
+				// 	$('.slider1').val(8000);
+				// 	$( "#slider1" ).slider( "value", 8000 );
+				// 	$('#slider1').addClass('yellow');
+				// } else {
+				// 	$('#slider1').removeClass('yellow');
+				// }
 				setZaim();
 			 });
 		}

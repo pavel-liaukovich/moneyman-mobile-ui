@@ -2261,10 +2261,12 @@ h3 {
 	font-size: 1.05em;
 	font-weight: bold;
 	margin: 15px 0;
+	margin-top: 25px;
 }
 .footer_copy {
 	margin-top: 15px;
-	color: #525254;
+	/*color: #525254;*/
+	color: #c6c6c6;
 	font-size: 0.63em;
 }
 .logo {
@@ -2526,7 +2528,9 @@ hr.marg {
 .timerDescr {
 	color: #b1b1b2;
 	font-size: 1em;
-	margin: 20px 0;
+	/*margin: 20px 0;*/
+	margin-top: 20px;
+	/*margin-bottom: 10px;*/
 	text-align: center;
 }
 .timerSingle {
@@ -2665,7 +2669,8 @@ hr.marg {
 	margin-top: -15px;
 }
 .question {
-	margin-bottom: 22px;
+	margin-bottom: 17px;
+	/*margin-bottom: 22px;*/
 	font-size: 1.05em;
 }
 .question:last-child {
@@ -2673,7 +2678,7 @@ hr.marg {
 }
 .question_title {
 	color: #8cc44a;
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
 }
 .question_title span {
 	border-bottom: 1px dashed #8cc44a;
@@ -2799,7 +2804,9 @@ hr.marg {
 .contactsCity {
 	font-size: 1em;
 	font-weight: bold;
-	margin: 22px 0;
+	/*margin: 22px 0;*/
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 .contacts .dashed {
 	font-size: 0.75em !important;
@@ -2819,7 +2826,9 @@ hr.marg {
 .textBlock .pMargin p:last-child {
 	margin-bottom: 0 !important;
 }
-
+/*.row:last-child {
+	margin-bottom:0;
+}*/
 
 
 
@@ -3318,6 +3327,9 @@ input[type=checkbox].styled:checked + label:after {
 @media screen and (max-width: 320px) {
 	.further a {
 		left: 25px;
+	}
+	.error {
+		font-size: 13px;
 	}
 }
 
