@@ -250,6 +250,9 @@ $(function() {
 			}
 		});
 		$('.form21').validate({
+			errorElement: 'span',
+			errorPlacement : function (error, element) {
+			},
 			submitHandler: function(form) {
 				//тут нужно делать проверки
 				// alert( 'go ajax 21' )
@@ -257,6 +260,7 @@ $(function() {
 			}
 		});
 		$('.form22').validate({
+			errorElement: 'span',
 			rules: {
 				bank_nomer: {
 					digits: true,
@@ -279,6 +283,22 @@ $(function() {
 					digits: true
 				},
 				yaPocket: {
+					tel: false,
+					digits: true
+				},
+				bank_no1: {
+					tel: false,
+					digits: true
+				},
+				bank_no2: {
+					tel: false,
+					digits: true
+				},
+				bank_no3: {
+					tel: false,
+					digits: true
+				},
+				bank_no4: {
 					tel: false,
 					digits: true
 				}
@@ -570,6 +590,8 @@ $(function() {
 	//button
 	(function () {
 		$('.btn23').on('click', function () {
+			$(this).slideToggle("fast");
+			$('.btn23info').slideToggle("fast");
 			$('.sms23').slideToggle("fast");
 		})
 		$('.givemecode').on('click', function (e) {

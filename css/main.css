@@ -2650,11 +2650,21 @@ hr.marg {
 	font-weight: bold;
 	font-size: 1.1em;
 }
-.menuWrap .active {
-	background-color: #90c04d;
+.menuWrap .menuLink:focus {
+	outline: none !important;
+}
+/*.menuWrap .active, .menuWrap .menuLink:active {*/
+.menuWrap .menuLink:active {
+	background-color: #90c04d !important;
+	-webkit-tap-highlight-color:#90c04d !important;
+	color: #fff !important;
+}
+.menuWrap li:last-child .menuLink {
+	padding-top: 10px;
 }
 .menuFullSite {
-	position: absolute;top: 45px;left: 29px;
+	/*position: absolute;top: 45px;left: 29px;*/
+	position: absolute;top: 34px;left: 29px;
 	color: #bbbaba;
 	font-size: 0.75em;
 	text-decoration: none !important;
@@ -2663,7 +2673,7 @@ hr.marg {
 	display: none;
 }
 .timer23 {
-	color: #444;
+	color: #999;
 }
 .img404 {
 	margin-top: -15px;
@@ -2829,9 +2839,16 @@ hr.marg {
 /*.row:last-child {
 	margin-bottom:0;
 }*/
-
-
-
+.btn23info {
+	display: none;
+}
+.dashedLink.givemecode:hover, .dashedLink.givemecode:active, .dashedLink.givemecode:focus {
+	border-bottom: 1px dashed #B00000;
+	text-decoration: none !important;
+}
+.labelWrap span.error {
+	display: none !important;
+}
 
 
 
@@ -3155,7 +3172,8 @@ a.dashed {
 	border-bottom: 1px dashed #94c74a;
 }
 a.dashed:hover {
-	border: none;
+	border-color: #B00000 !important;
+	/*border: none;*/
 }
 .fsz20 {
 	font-size: 1.25em !important;
@@ -3179,7 +3197,7 @@ input[type=checkbox].styled, input[type=radio].styled {
 	padding:0;
 	border:0;
 }
-input[type=radio].styled + label, input[type=checkbox].styled + label {
+input[type=radio].styled + label, input[type=checkbox].styled ~ label {
 	padding-left:30px; 
 	display:inline-block;
 	line-height:25px;
@@ -3187,7 +3205,7 @@ input[type=radio].styled + label, input[type=checkbox].styled + label {
 	position: relative;
 	vertical-align:bottom;
 }
-input[type=checkbox].styled + label {
+input[type=checkbox].styled ~ label {
 	padding-left:33px;
 }
 
@@ -3228,7 +3246,7 @@ input[type=radio].styled:checked + label:after {
 }
 
 
-input[type=checkbox].styled + label:before {
+input[type=checkbox].styled ~ label:before {
 	content:'';
 	border: 1px solid #D5D5D6;
 	width: 25px;
@@ -3237,7 +3255,7 @@ input[type=checkbox].styled + label:before {
 	/*background: url(../img/sprite.png) 0 0 no-repeat;*/
 	position: absolute;left: 0;top: 0;
 }
-input[type=checkbox].styled + label:after {
+input[type=checkbox].styled ~ label:after {
 	content:'✓';
 	/*content:'✔';*/
 	width: 25px;
@@ -3250,10 +3268,15 @@ input[type=checkbox].styled + label:after {
 	position: absolute;left: 0px;top: 0px;
 }
 
-input[type=checkbox].styled:checked + label:after {
+input[type=checkbox].styled:checked ~ label:after {
 	color: #91c73d;
 	/*background-position: -32px -0;*/
 }
+
+input[type=checkbox].styled.error ~ label:before {
+	border-color: red !important;
+}
+
 
 .popover-content {
 	font-size: 1em;
