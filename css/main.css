@@ -2407,6 +2407,8 @@ hr.marg {
 .sliderWrap {
 	padding-left: 45px;
 	padding-right: 62px;
+	margin-bottom: 30px;
+	margin-top: 20px;
 	position: relative;
 }
 .sliderWrap_less {
@@ -2654,11 +2656,13 @@ hr.marg {
 	outline: none !important;
 }
 /*.menuWrap .active, .menuWrap .menuLink:active {*/
-.menuWrap .menuLink:active {
+.menuWrap .menuLink:active, .menuWrap .menuLink:focus {
 	background-color: #90c04d !important;
 	-webkit-tap-highlight-color:#90c04d !important;
 	color: #fff !important;
+	overflow: hidden;
 }
+
 .menuWrap li:last-child .menuLink {
 	padding-top: 10px;
 }
@@ -3274,7 +3278,7 @@ input[type=checkbox].styled:checked ~ label:after {
 }
 
 input[type=checkbox].styled.error ~ label:before {
-	border-color: red !important;
+	border-color: #D80B0B !important;
 }
 
 

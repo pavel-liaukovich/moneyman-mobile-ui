@@ -379,7 +379,14 @@ $(function() {
 
 		radio.on('change', function () {
 			sects.slideUp('fast');
-			$(this).closest('.labelWrap').next('.sect').slideDown('fast');
+			var that = $(this);
+			$(this).closest('.labelWrap').next('.sect').slideDown('fast', function () {
+				var scrollTop = that.closest('.labelWrap').offset().top - 10;
+				window.scrollTo(0, scrollTop);
+				// $("html, body").animate({ scrollTop: scrollTop }, 'fast');
+				
+			});
+
 		})
 	}
 
