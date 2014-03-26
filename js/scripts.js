@@ -68,7 +68,8 @@
  */
 (function ($) {
 	$.extend($.validator.messages, {
-		required: "Это поле необходимо заполнить.",
+		// required: "Это поле необходимо заполнить.",
+		required: "Это поле нужно заполнить.",
 		remote: "Пожалуйста, введите правильное значение.",
 		email: "Пожалуйста, введите корректный адрес электронной почты.",
 		url: "Пожалуйста, введите корректный URL.",
@@ -156,7 +157,13 @@ $(function() {
 
 	}, 'Пожалуйста, используйте: русские символы, цифры и символы: "-", "/".');
 
+	$.validator.addMethod("changePassword", function (value, element) {
+		var val1 = $('input[name="new"]').val(),
+			val2 = $('input[name="new2"]').val();
 
+		return (val1 == val2) ? true : false;
+
+	}, 'Введенные пароли не совпадают.');
 
 
 	//validation
@@ -351,6 +358,110 @@ $(function() {
 				// var s = $(form).serializeArray();
 				// console.log(s)
 				// alert( 'go ajax 22' )
+				// form.submit();
+			}
+		});
+		$('.form54').validate({
+			rules: {
+				phone_home: {
+					tel: true
+				},
+				reg6: {
+					address: true,
+				},
+				reg7: {
+					address: true,
+				},
+				reg8: {
+					address: true,
+				},
+				reg9: {
+					digits: true,
+					tel: false
+				},
+			},
+			submitHandler: function(form) {
+				// alert( 'go ajax 54' )
+				// form.submit();
+			}
+		});
+		$('.form56').validate({
+			submitHandler: function(form) {
+				// alert( 'go ajax 56' )
+				// form.submit();
+			}
+		});
+		$('.form58').validate({
+			rules: {
+				secret: {
+					secret: true
+				},
+				mobile: {
+					tel: true
+				}
+			},
+			submitHandler: function(form,e) {
+				// alert( 'go ajax 58' )
+				// form.submit();
+			}
+		});
+		$('.form510').validate({
+			submitHandler: function(form) {
+
+			}
+		});
+		$('.form512').validate({
+			rules: {
+				lastName: {
+					names: true
+				},
+				name: {
+					names: true
+				},
+				patronymic: {
+					names: true
+				},
+				birthplace: {
+					birthplace2: true
+				},
+				pass_series: {
+					tel: false,
+					digits: true
+				},
+				pass_nomer: {
+					tel: false,
+					digits: true
+				},
+				reg6: {
+					address: true,
+				},
+				reg7: {
+					address: true,
+				},
+				reg8: {
+					address: true,
+				},
+				reg9: {
+					tel: false,
+					digits: true,
+				},
+				phone_home: {
+					tel: true
+				}
+			},
+			submitHandler: function(form) {
+				alert( 'go ajax 13' )
+				// form.submit();
+			}
+		});
+		$('.form513').validate({
+			rules: {
+				new2: {
+					changePassword: true
+				}
+			},
+			submitHandler: function(form) {
+				alert( 'go ajax 513' )
 				// form.submit();
 			}
 		});
@@ -626,9 +737,18 @@ $(function() {
 	//\button
 	//24
 	(function () {
-		$('#credit1, #credit2').on('change', function () {
-			$('.creditQuestions').slideToggle('fast');
+		$('#credit1, #credit2, #credit3').on('change', function () {
+			var val = $(this).val();
+			if(val > 0) {
+				$('.creditQuestions').slideDown('fast');
+			} else {
+				$('.creditQuestions').slideUp('fast');
+			}
+			// $('.creditQuestions').slideToggle('fast');
 		})
+		// $('#credit1, #credit2, #credit3').on('change', function () {
+		// 	$('.creditQuestions').slideToggle('fast');
+		// })
 	})();
 
 	//page 34, timer

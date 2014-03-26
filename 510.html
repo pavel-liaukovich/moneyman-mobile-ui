@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- <meta name="title" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" /> -->
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		
+
+	 <title>Главная</title> 
+	</head> 
+	<body> 
+		<div class="globalWrap gray-bg">
+			<div class="menuWrap">
+				<nav>
+					<ul>
+						<li><a class="menuLink" href="#">Оформление займа</a></li>
+						<li><a class="menuLink" href="#">О нас</a></li>
+						<li><a class="menuLink" href="#">Как это работает</a></li>
+						<li><a class="menuLink" href="#">Способ получения денег</a></li>
+						<li class="active"><a class="menuLink" href="#">Как погасить заем</a></li>
+						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
+						<li><a class="menuLink" href="#">Контакты</a></li>
+						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
+				</ul>
+				</nav>
+			</div>
+			<div id="wrapper" class="clearfix gray"> 
+				<header id="header" class="header__account header__back">
+					<a href='#' class="accountTitle">Кредитная история</a>
+				</header> 
+				<div id="body" class="container-fluid form" style="padding-bottom:109px;">
+					<div class="containerInner">
+						<form class="form510">
+							<div class="gray">
+								<div class="row">
+									<div class="col-xs-12">
+										<p class="form-title">Сколько раз раньше вы брали <br /> кредиты в банках?</p>
+										<div class="radio510 darkgray">
+											<input type="radio" class="novalid styled" name="credits" value="0" id="credit1" checked /><label for="credit1" class="mr10">Ни разу</label>
+											<input type="radio" class="novalid styled" name="credits" value="1" id="credit2" /><label for="credit2" class="mr10">Один</label>
+											<input type="radio" class="novalid styled" name="credits" value="2" id="credit3" /><label for="credit3">Два и более</label>
+										</div>
+									</div>
+								</div>
+								<div class="creditQuestions">
+									<h2>Вопросы по кредиту</h2>
+									<div class="row">
+										<div class="col-xs-12">
+											<p class="form-title">В каком банке вы брали кредит?</p>
+											<select class="full" required>
+												<option> </option>
+												<option>Ак Барс Банк</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<p class="form-title">Какой кредит вы брали?</p>
+											<select class="full" required name="whatCredit">
+												<option> </option>
+												<option>Автокредит</option>
+											</select>
+										</div>
+									</div>
+									<p class="form-title">Когда вы взяли кредит?</p>
+									<div class="dateRow dateRow3">
+										<div class="dateRow_first">
+											<select class="full date1" name="when" required>
+												<option> </option>
+												<option>01</option>
+											</select>
+										</div>
+										<div class="dateRow_second">
+											<select class="full" name="when2" required>
+												<option> </option>
+												<option>Января</option>
+											</select>
+										</div>
+										<div class="dateRow_third">
+											<select class="full" name="when3" required>
+												<option> </option>
+												<option>1980</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<p class="form-title">Погашен ли кредит?</p>
+											<input type="radio" class="novalid styled" name="repay" value="1" id="creditSS1" checked /><label for="creditSS1" class="mr10">Да</label>
+											<input type="radio" class="novalid styled" name="repay" value="0" id="creditSS2" /><label for="creditSS2">Нет</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<p class="form-title">В какой валюте вы брали кредит?</p>
+											<select class="full" required name="currency">
+												<option> </option>
+												<option>Российский рубль</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-10">
+											<p class="form-title">На какую сумму вы брали кредит?</p>
+											<div class="pseudoRub">
+												<select class="full" name="summ" required>
+													<option> </option>
+													<option>10 000</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-10">
+											<p class="form-title">Если у вас кредитная карта, то какой на ней максимальный лимит?</p>
+											<div class="pseudoRub">
+												<select class="full" name="exps" required>
+													<option> </option>
+													<option>10 000</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<p class="form-title">Какая была максимальная просрочка за все время существования данного кредита?</p>
+											<select class="full" required name="del">
+												<option> </option>
+												<option>Просрочек не было</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mbn">
+								<div class="col-xs-12 further tal">
+									<button class="btn btn-green btn-submit">Сохранить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<footer id="footer"> 
+			<a href="#">Полная версия сайта</a>
+			<p class="footer_copy">© 2014 Moneyman, торговая марка ООО «Мани Мен»</p>
+		</footer> 
+
+
+
+
+
+
+
+		
+		
+		<script src="http://yandex.st/jquery/2.1.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
+		
+		<script src="js/scripts.js"></script>
+	</body> 
+</html>

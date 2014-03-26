@@ -2381,6 +2381,7 @@ h3 {
 	top:0;
 }
 .sms_block {
+	margin-top: 15px;
 	display: none;
 }
 
@@ -2856,19 +2857,115 @@ hr.marg {
 
 
 
+.header__account {
+	height: 75px !important;
+	padding-top: 0 !important;
+}
+.header__account {
+	width: 3000px;
+	height: 75px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 60px;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.header__changeLink {
+	padding-right: 89px;
+}
+.accountTitle {
+	/*float: left;*/
+	/*height: 75px;*/
+	/*line-height: 75px;*/
+	/*padding-left: 70px;*/
+	color: #47484a !important;
+	font-family: 'Ubuntu', 'Ubuntu Beta', UbuntuBeta, Ubuntu, 'Bitstream Vera Sans', 'DejaVu Sans', 'Myriad Pro', Tahoma, sans-serif;
+	font-size: 19px;
+	/*line-height: 1;*/
+	text-decoration: none !important;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.header__back .accountTitle:before {
+	content:'';
+	width: 14px;
+	height: 24px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdNJREFUeNqMlLtKA0EUhmfiBgxeEIOgvoCPEDEvYKloQBSJIKhowEsQBC/EXESIF9DEiAhaiRY29laSYGysbGxUECyCjRbiJa7f4AZizGZ34efMJueb/8ycmZW6rgs7TzLrdRFWyO8UUh5qwv4zgUaklE6smjUbTpIwqws9LIXUiHHipqxUaiLrdUJNkRPBqYqfVtHShCetm4I4VROC/L8M9KUggFDhf80EqiHMoQWgd8qLBTyZSHHOPzBx2VFLcog6gpT5gWM00J6JluZpJU51QGod4yiPIuWgPyAbUY/DBsNhpBYeRjGzjdMMyAW0xdCPvlnTIlseV7tnBjrURgDtkOxnPXky54HWgD4r9Vc5HiAfya9CikXGKaAPq4PhQG3GWCXf24EKYD9lXhPdaIfSu41jVhnE4YYy+4CveG9VXWGdXfRTWjkK4FsDvuC1BWKffvZaggZ8BzzI8Bw1MkmKNvksQQN+oCVDDM+YxI3zHuvtsQTVwxF7JIzheMIkDSiVLONc6Vo1id/T1Iee0SgVnZo6FpWdI0yiI9UqKthlsgFLx6Jr5maH141znCN7mngs7XzljJsTVx8rnJ/YuKTDzvEKeNIvhBm0zYV7UzfoR4ABAFoexcnGkvmWAAAAAElFTkSuQmCC) no-repeat;
+	margin-top: -12px;
+	position: absolute;	top: 50%;left: -34px;
+}
+.header_change {
+	/*float: right;
+	margin-right: 30px;*/
+	/*height: 75px;*/
+	/*line-height: 75px;*/
+	font-size: 14px;
+	/*padding-right: 30px;*/
+	background-color: #fff;
+	line-height: 1;
+	position: absolute;right: 15px;top: 32px;
+}
 
+.containerInner {
+	margin-bottom: 15px;
+}
+.menuLinks {
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-top: -15px;
+	background-color: #f8f8f8;
+}
+.menuLinks li {
+}
+.menuLinks li:last-child a {
+	border-bottom: none;
+}
+.menuLinks a {
+	border-bottom: 1px solid #e6e6e6;
+	padding: 20px 30px 20px 30px;
+	display: block;
+	color: #525254;
+	font-weight: bold;
+	text-decoration: none;
+}
 
+.header__back .menuButton {
+	display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
+.header__back .accountTitle {
+	position: relative;
+}
+/*.header__back .accountTitle:before {
+	content:'';
+	width: 14px;
+	height: 24px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdNJREFUeNqMlLtKA0EUhmfiBgxeEIOgvoCPEDEvYKloQBSJIKhowEsQBC/EXESIF9DEiAhaiRY29laSYGysbGxUECyCjRbiJa7f4AZizGZ34efMJueb/8ycmZW6rgs7TzLrdRFWyO8UUh5qwv4zgUaklE6smjUbTpIwqws9LIXUiHHipqxUaiLrdUJNkRPBqYqfVtHShCetm4I4VROC/L8M9KUggFDhf80EqiHMoQWgd8qLBTyZSHHOPzBx2VFLcog6gpT5gWM00J6JluZpJU51QGod4yiPIuWgPyAbUY/DBsNhpBYeRjGzjdMMyAW0xdCPvlnTIlseV7tnBjrURgDtkOxnPXky54HWgD4r9Vc5HiAfya9CikXGKaAPq4PhQG3GWCXf24EKYD9lXhPdaIfSu41jVhnE4YYy+4CveG9VXWGdXfRTWjkK4FsDvuC1BWKffvZaggZ8BzzI8Bw1MkmKNvksQQN+oCVDDM+YxI3zHuvtsQTVwxF7JIzheMIkDSiVLONc6Vo1id/T1Iee0SgVnZo6FpWdI0yiI9UqKthlsgFLx6Jr5maH141znCN7mngs7XzljJsTVx8rnJ/YuKTDzvEKeNIvhBm0zYV7UzfoR4ABAFoexcnGkvmWAAAAAElFTkSuQmCC) no-repeat;
+	position: absolute;	top: 50%;left: 34px;
+}*/
+.acc_list {
+	font-size: 17px;
+}
+.acc_list dt, .acc_list dd {
+	margin: 0;
+}
+.acc_list dt {
+	color: #a5a5a6;
+}
+.acc_list dd {
+	color: #525254;
+	margin-bottom: 18px;
+}
+.radio510 label {
+	margin-bottom: 10px;
+}
+.radio510 {
+	margin-top: 10px;
+}
 
 
 
@@ -3171,11 +3268,11 @@ textarea {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-a.dashed {
+a.dashed, span.dashed {
 	text-decoration: none;
 	border-bottom: 1px dashed #94c74a;
 }
-a.dashed:hover {
+a.dashed:hover, span.dashed:hover {
 	border-color: #B00000 !important;
 	/*border: none;*/
 }
@@ -3358,6 +3455,12 @@ input[type=checkbox].styled.error ~ label:before {
 	.error {
 		font-size: 13px;
 	}
+	.header__back .accountTitle {
+		font-size: 14px;
+	}
+	.header__back .header_change {
+		font-size: 12px;
+	}
 }
 
 
@@ -3370,6 +3473,9 @@ input[type=checkbox].styled.error ~ label:before {
 @media screen and (max-width: 360px) {
 	label.error {
 		font-size: 0.75em;
+	}
+	.accountTitle {
+		font-size: 18px;
 	}
 }
 
