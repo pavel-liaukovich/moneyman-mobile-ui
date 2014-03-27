@@ -16,9 +16,9 @@
 
 		
 
-	 <title>Фактический адрес проживания</title> 
-	</head> 
-	<body> 
+	 <title>Занятость и доходы</title> 
+	</head>
+	<body>
 		<div class="globalWrap gray-bg">
 			<div class="menuWrap">
 				<nav>
@@ -53,83 +53,84 @@
 					</table>
 				</header> 
 				<div id="body" class="container-fluid gray form">
-					<form  class="form14">
-						<h2>Фактический адрес проживания</h2>
+					<form class="form11">
+						<h2>Занятость и доходы</h2>
 						<div class="row">
 							<div class="col-xs-12">
-								<p class="form-title">Домашний телефон</p>
+								<p class="form-title">Образование</p>
+								<select class="full" name="education" required>
+									<option> </option>
+									<option>Неполное среднее</option>
+								</select>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-1 prn pt8">
-								<b>+7</b>
-							</div>
-							<div class="col-xs-11">
-							<input type="tel" name="phone_home" class="full tel" placeholder="(___)___-__-__" required />
-							</div>
-						</div>
-						
 						<div class="row">
 							<div class="col-xs-12">
-							<input type="checkbox" name="sameAddr" id="fact_adr" class="novalid styled" />
-								<label for="fact_adr" class="adr-label">
-									Мой адрес пребывания совпадает <br />
-									с адресом прописки
-								</label>
+								<p class="form-title">Занятость</p>
+								<select class="full" name="occupation" required>
+									<option> </option>
+									<option>Безработный</option>
+								</select>
 							</div>
 						</div>
-						<div class="blockHide">
-							<div class="row">
-								<div class="col-xs-12">
-									<p class="form-title">Регион проживания</p>
-									<input type="text" name="reg1" class="full autocomplete" data-source="region" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<p class="form-title">Район (поселок, деревня, село)</p>
-									<input type="text" name="reg2" class="full autocomplete" data-source="region" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<p class="form-title">Город</p>
-									<input type="text" name="reg3" class="full autocomplete" data-source="region" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<p class="form-title">Населенный пункт</p>
-									<input type="text" name="reg4" class="full autocomplete" data-source="region" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<p class="form-title">Улица</p>
-									<input type="text" name="reg5" class="full autocomplete" data-source="region" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3">
-									<p class="form-title">Дом</p>
-									<input type="text" name='reg6' maxlength="7" class="full" data-valid="address" />
-								</div>
-								<div class="col-xs-3">
-									<p class="form-title">Стр.</p>
-									<input type="text" name="reg7" maxlength="4" class="full" data-valid="address" />
-								</div>
-								<div class="col-xs-3">
-									<p class="form-title">Корп.</p>
-									<input type="text" name="reg8" maxlength="4" class="full" data-valid="address" />
-								</div>
-								<div class="col-xs-3">
-									<p class="form-title">Кв.</p>
-									<input type="tel" name="reg9" class="full" maxlength="4" />
+						<div class="row">
+							<div class="col-xs-10">
+								<p class="form-title">Ваш ежемесячный доход</p>
+								<div class="pseudoRub">
+									<select class="full" name="income" required>
+										<option> </option>
+										<option>10 000</option>
+									</select>
 								</div>
 							</div>
 						</div>
-			
-			
+						<div class="row mbn">
+							<div class="col-xs-12">
+								<p class="form-title">Дата следующей зарплаты <span class="small">(приблизительно)</span></p>
+							</div>
+						</div>
+						<div class="dateRow dateRow3">
+							<div class="dateRow_first">
+								<select class="full date1" name="salary1" required>
+									<option> </option>
+									<option>01</option>
+								</select>
+							</div>
+							<div class="dateRow_second">
+								<select class="full" name="salary2" required>
+									<option> </option>
+									<option>Месяц</option>
+								</select>
+							</div>
+							<div class="dateRow_third">
+								<select class="full" name="salary3" required>
+									<option> </option>
+									<option>Год</option>
+									<option>1999</option>
+									<option>2014</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="form-title">Недвижимость в собственности</p>
+								<select class="full" name="realty" required>
+									<option> </option>
+									<option>1</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10">
+								<p class="form-title">Ежемесячные расходы по кредиту</p>
+								<div class="pseudoRub">
+									<select class="full" name="exps" required>
+										<option> </option>
+										<option>5 000</option>
+									</select>
+								</div>
+							</div>
+						</div>
 						<div class="row mbn">
 							<div class="col-xs-12 further">
 								<a href="#">Назад</a>

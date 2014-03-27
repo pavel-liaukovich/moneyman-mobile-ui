@@ -221,7 +221,7 @@ $(function() {
 				},
 				reg9: {
 					tel: false,
-					digits: true,
+					// digits: true,
 				},
 				phone_home: {
 					tel: true
@@ -247,7 +247,7 @@ $(function() {
 					address: true,
 				},
 				reg9: {
-					digits: true,
+					// digits: true,
 					tel: false
 				},
 			},
@@ -376,7 +376,7 @@ $(function() {
 					address: true,
 				},
 				reg9: {
-					digits: true,
+					// digits: true,
 					tel: false
 				},
 			},
@@ -735,6 +735,11 @@ $(function() {
 		})
 	})();
 	//\button
+
+
+
+
+
 	//24
 	(function () {
 		$('#credit1, #credit2, #credit3').on('change', function () {
@@ -833,7 +838,7 @@ $(function() {
 
 	//menu
 	(function () {
-		
+		$('#footer a, #footer p').wrapAll('<div class="footerInner"></div>');
 	})();
 	$('.menuButton').on('click', function () {
 		var gl = $('.globalWrap'),
@@ -848,6 +853,10 @@ $(function() {
 
 		function openMenu() {
 			gl.addClass("open");
+			$('body').addClass('menuOpen');
+			//двигаем футер
+			
+
 			setTimeout(function(){
 				wrap.on('click.menu touchmove.menu', function (e) {
 					closeMenu();
@@ -858,12 +867,14 @@ $(function() {
 		}
 		function closeMenu() {
 			gl.removeClass("open");
+			$('body').removeClass('menuOpen');
 			wrap.off('.menu');
 		}
 	})
 
 	function menuSize() {
-		$('.menuWrap nav').css({'maxHeight':$('.globalWrap').outerHeight() - 109})//109-footer height
+		// $('.menuWrap nav').css({'maxHeight':$('.globalWrap').outerHeight() - 109})//109-footer height
+		$('.menuWrap nav').css({'height':$('.globalWrap').outerHeight()})//109-footer height
 	}
 	menuSize();
 	$(window).on('resize', function () {
@@ -885,9 +896,47 @@ $(function() {
 
 
 
+	//58
+	(function () {
+		$('.btn58').on('click', function () {
+			$(this).slideToggle("fast");
+			$('.btn58info').slideToggle("fast");
+			$('.sms58').slideToggle("fast");
+		})
+		$('.givemecode2').on('click', function (e) {
+			var timer = 59;
+			// $('.btn23, .sms23').slideUp();
+			$(this).slideUp('fast');
+			e.preventDefault();
+			var timer23 = $('<p class="timer23 timer58"></p>');
+			timer23.text('Код отправлен 59').insertAfter($('.timerRow'));
+
+
+			var interval = setInterval(function () {
+				if(timer > 0) {
+					timer--;
+					timer23.text('Код отправлен '+timer)
+				} else {
+					timer23.text('Код отправлен '+timer)
+					clearInterval(interval);
+					timer23.remove();
+					$('.givemecode2').slideDown();
+				}
+			}, 1000);
+		})
+
+		$('.submit58').on('click', function () {
+			$('.form58').submit();
+		})
+	})();
 
 
 
-
-
+	//отключаем стилизованные чекбоксы в опера мини
+	(function () {
+			// alert( 'opera mini!' )
+		if((/(Opera Mini)/gi).test(navigator.userAgent.toLowerCase())) {
+			$('.styled').removeClass('styled');
+		}
+	})();
 });
