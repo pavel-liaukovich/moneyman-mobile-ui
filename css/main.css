@@ -2476,7 +2476,9 @@ hr.marg {
 	text-decoration: none;
 }
 .dashedLink:hover {
-	border-bottom: none;
+	text-decoration: none;
+	border-color: #B00000 !important;
+	/*border-bottom: none;*/
 }
 .bg-white {
 	background-color: #fff !important;
@@ -2665,11 +2667,12 @@ hr.marg {
 }
 
 .menuWrap li:last-child .menuLink {
-	padding-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 25px;
 }
 .menuFullSite {
 	/*position: absolute;top: 45px;left: 29px;*/
-	position: absolute;top: 34px;left: 29px;
+	position: absolute;top: 40px;left: 29px;
 	color: #bbbaba;
 	font-size: 0.75em;
 	text-decoration: none !important;
@@ -2963,17 +2966,27 @@ hr.marg {
 	overflow: hidden;
 	background: none;
 }
-.menuOpen .footerInner {
-	position: relative;
-	left: 280px;
-}
 .footerInner {
+	position: relative;
 	-webkit-transition: all 280ms;
 	-moz-transition: all 280ms;
 	-ms-transition: all 280ms;
 	-o-transition: all 280ms;
 	transition: all 280ms;
 }
+.menuOpen .footerInner {
+	left: 280px;
+	-webkit-transition: all 280ms;
+	-moz-transition: all 280ms;
+	-ms-transition: all 280ms;
+	-o-transition: all 280ms;
+	transition: all 280ms;
+}
+
+.menuOpen .globalWrap {
+	z-index: 5;
+}
+
 .sms_block.sms58 {
 	margin-top: 0;
 }

@@ -443,7 +443,7 @@ $(function() {
 				},
 				reg9: {
 					tel: false,
-					digits: true,
+					// digits: true,
 				},
 				phone_home: {
 					tel: true
@@ -839,6 +839,14 @@ $(function() {
 	//menu
 	(function () {
 		$('#footer a, #footer p').wrapAll('<div class="footerInner"></div>');
+		// var t = $('.footerInner').css({ WebkitTransition : 'all 280ms',
+		//    								MozTransition    : 'all 280ms',
+		//    								MsTransition     : 'all 280ms',
+		//    								OTransition      : 'all 280ms',
+		//    								transition       : 'all 280ms'})
+		// 						.prop('clientHeight');
+
+		   
 	})();
 	$('.menuButton').on('click', function () {
 		var gl = $('.globalWrap'),
@@ -855,7 +863,9 @@ $(function() {
 			gl.addClass("open");
 			$('body').addClass('menuOpen');
 			//двигаем футер
-			
+			// $('.footerInner').addClass('footerOpen');
+			// $('.footerInner').animate({'left':'280'}, 280, 'linear');
+			// $('.footerInner').css({'left':'280px'});
 
 			setTimeout(function(){
 				wrap.on('click.menu touchmove.menu', function (e) {
@@ -868,6 +878,7 @@ $(function() {
 		function closeMenu() {
 			gl.removeClass("open");
 			$('body').removeClass('menuOpen');
+			// $('.footerInner').animate({'left':'0'}, 280, 'linear');
 			wrap.off('.menu');
 		}
 	})
@@ -900,7 +911,7 @@ $(function() {
 	(function () {
 		$('.btn58').on('click', function () {
 			$(this).slideToggle("fast");
-			$('.btn58info').slideToggle("fast");
+			$('.btn23info').slideToggle("fast");
 			$('.sms58').slideToggle("fast");
 		})
 		$('.givemecode2').on('click', function (e) {
@@ -934,7 +945,6 @@ $(function() {
 
 	//отключаем стилизованные чекбоксы в опера мини
 	(function () {
-			// alert( 'opera mini!' )
 		if((/(Opera Mini)/gi).test(navigator.userAgent.toLowerCase())) {
 			$('.styled').removeClass('styled');
 		}
