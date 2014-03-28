@@ -839,13 +839,6 @@ $(function() {
 	//menu
 	(function () {
 		$('#footer a, #footer p').wrapAll('<div class="footerInner"></div>');
-		// var t = $('.footerInner').css({ WebkitTransition : 'all 280ms',
-		//    								MozTransition    : 'all 280ms',
-		//    								MsTransition     : 'all 280ms',
-		//    								OTransition      : 'all 280ms',
-		//    								transition       : 'all 280ms'})
-		// 						.prop('clientHeight');
-
 		   
 	})();
 	$('.menuButton').on('click', function () {
@@ -858,6 +851,10 @@ $(function() {
 		} else {
 			closeMenu();
 		}
+		$('.closeMenu').on('click', function () {
+			closeMenu();
+			return false;
+		})
 
 		function openMenu() {
 			gl.addClass("open");
