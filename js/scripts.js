@@ -469,12 +469,12 @@ $(function() {
 	//\validation	
 
 	//input mask
-	var masks = {
-		tel: '(999)999-99-99'
-	}
-	if($('.tel').length) {
-		$(".tel").inputmask({"mask": masks.tel});
-	}
+	// var masks = {
+	// 	tel: '(999)999-99-99'
+	// }
+	// if($('.tel').length) {
+	// 	$(".tel").inputmask({"mask": masks.tel});
+	// }
 	//\input mask
 
 	//14(not only 14) hide adress block

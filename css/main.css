@@ -2993,11 +2993,28 @@ hr.marg {
 .timer58 {
 	margin-bottom: 10px;
 }
+.block62small {
+	color: #535255;
+	font-size: 12px;
+}
+.zaymInfo {
+	overflow: hidden;
+}
+.zaymInfo li {
+	margin-bottom: 18px;
+	overflow: hidden;
+}
 
-
-
-
-
+.zaymInfo_dt {
+	color: #b7b7b8;
+}
+.zaymInfo_dd {
+	float: right;
+	color: #535255;
+}
+.zaymInfo ul {
+	clear: both;
+}
 
 
 
