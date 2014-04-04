@@ -3181,8 +3181,14 @@ hr.marg {
 	text-align: left;
 	padding-bottom: 5px;
 }
-
-
+.label65:disabled {
+	color: #525254 !important;
+	-webkit-text-fill-color: #525254 !important;
+	opacity: 1 !important;
+}
+.sms_helper {
+	color: #B0B0B0;
+}
 
 
 
