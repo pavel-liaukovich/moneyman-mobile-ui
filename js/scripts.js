@@ -465,6 +465,25 @@ $(function() {
 				// form.submit();
 			}
 		});
+
+		$('.form66').validate({
+			rules: {
+				zaimSumm: {
+					digits: true,
+					tel: false
+				},
+				zaimTime: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form) {
+				// var s = $(form).serializeArray();
+				// console.log(s)
+				// alert( 'go ajax 22' )
+				// form.submit();
+			}
+		});
 	})();
 	//\validation	
 
@@ -938,12 +957,222 @@ $(function() {
 		})
 	})();
 
-
-
-	//отключаем стилизованные чекбоксы в опера мини
+	//62
 	(function () {
+		$('.toggle62').on('click', function () {
+			$('.toggle62Content').stop(true,true).slideToggle("fast");
+		});
+	})();
+
+	//63
+	// slider63(4000, 8, 68); - вызывать надо в коде страницы
+	$('.p63Next').on('click', function () {
+		$('.bg-white').slideToggle("fast");
+	})
+	//65
+	$('.p65Next').on('click', function () {
+		$('.p65oferta').slideToggle("fast");
+	})
+	$('.payment65').on('click', function () {
+		$('.payment65Block').slideToggle("fast");
+	})
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//sms blocks
+	;(function () {
+		var timerRow = $('.sms_timerWrap'),
+			timerSpan = $('.sms_timer'),
+			timerLink = $('.codeLink');
+
+		$('.sms_button').on('click', function () {
+			$(this).slideUp('fast');
+			$('.sms_body').slideDown('fast');
+		});
+		timerLink.on('click', function (e) {
+			var timer = 59;
+				
+			$(this).slideUp('fast');
+			e.preventDefault();
+
+			$('.sms_timerWrap').slideDown('fast');
+			timerSpan.text('Код отправлен 59');
+
+
+			var interval = setInterval(function () {
+				if(timer > 0) {
+					timer--;
+					timerSpan.text('Код отправлен '+timer)
+				} else {
+					timerSpan.text('Код отправлен '+timer)
+					clearInterval(interval);
+					timerRow.slideUp('fast');
+					timerLink.slideDown('fast');
+				}
+			}, 1000);
+		});
+	})();
+	
+	//отключаем стилизованные чекбоксы в опера мини
+	;(function () {
 		if((/(Opera Mini)/gi).test(navigator.userAgent.toLowerCase())) {
 			$('.styled').removeClass('styled');
 		}
 	})();
 });
+
+
+
+function slider63(loan, days1, days2) {//loan - сколько денег брал, days1 - на сколько дней брался кредит, days2 - сколько дней уже прошло
+	var $select = $('.slider63select'),
+		$cost = $('.s63Cost'),
+		$date = $('.s63_1'),
+		$extend = $('.s63_2'),
+		$penalty = $('.s63_3'),
+		cost = {
+			"7"  : 700,
+			"14" : 1120,
+			"21" : 1680,
+			'28' : 2240
+		},
+		val = 7;
+
+	$( "#slider63" ).slider({
+		range: "min",
+		value: 7,
+		min: 7,
+		max: 28,
+		step: 7,
+		slide: function( event, ui ) {
+			val = ui.value;
+			$select.val(val);
+			setZaim2();
+		}
+	});
+
+	$select.on('change', function () {
+		val = $(this).val();
+		$("#slider63").slider("value", val);
+		setZaim2();
+	})
+
+	setZaim2();
+	function setZaim2() {
+		//set cost
+		$cost.text(cost[val])
+
+		var curVal = loan,
+			perc,
+			total;
+
+		if(days1 <=7) {
+			perc = 2.5
+		} else if(days1 == 8) {
+			perc = 2.4
+		} else if(days1 == 9) {
+			perc = 2.3
+		} else if(days1 == 10) {
+			perc = 2.2
+		} else if(days1 == 11) {
+			perc = 2.1
+		} else if(days1 >= 12) {
+			perc = 2
+		}
+
+		var toReturn = +curVal + Math.round(curVal*0.01*perc*days1),
+			overheadPerc1 = Math.round(curVal*0.01*perc*(days2-days1)),
+			fix1 = 1000 + curVal*0.75*0.01*(days2-days1);
+	
+		$extend.text(toReturn + overheadPerc1 + fix1);
+
+
+		//penalty
+		var overheadPerc2 = Math.round(curVal*0.01*perc*(days2-days1 + val)),
+			fix2 = 1000 + curVal*0.75*0.01*(days2-days1 + val);;
+
+		$penalty.text(toReturn + overheadPerc2 + fix2);
+
+		setDate2();
+	}
+
+	function setDate2() {
+		var d = new Date(),
+			month;
+		d.setDate(d.getDate() + (val));
+
+		var monthText = ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'];
+
+		//добавляем ноль в номер месяца если цифра меньше 10
+		// (+d.getMonth() < 10) ? month = '0' + (d.getMonth() + 1) : month = (d.getMonth() + 1);
+
+		$date.html('<span class="fsz14">'+d.getDate()+'&nbsp;'+monthText[d.getMonth()]+'<br />'+d.getFullYear()+'</span>');
+	}	
+}
+
+
+function slider65() {
+	var label65 = $('.label65');
+	$( "#slider65" ).slider({
+		range: "min",
+		value: 7,
+		min: 300,
+		max: 15000,
+		step: 100,
+		slide: function( event, ui ) {
+			val = ui.value;
+			label65.val(val);
+			// setZaim2();
+		}
+	});
+}

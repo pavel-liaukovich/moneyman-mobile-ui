@@ -34,23 +34,59 @@
 				</ul>
 				</nav>
 			</div>
-			<div id="wrapper" class="clearfix gray"> 
+			<div id="wrapper" class="clearfix gray-bg"> 
 				<header id="header" class="header__account header__back">
 					<a class="accountTitle" href="51.html"></a>
-					<span>Заем #324354</span>
+					<span>Оформить заем</span>
 				</header> 
 				<div id="body" class="container-fluid form" style="padding-bottom:109px;">
-					<div class="containerInner mb0">
-						<nav class="menuLinks">
-							<ul>
-								<li><a href="62.html">Информация о займе</a></li>
-								<li><a href="63.html">Отсрочка выплаты</a></li>
-								<li><a href="65.html">Реструктуризация</a></li>
-								<li><a href="#">Погашение</a></li>
-
-							</ul>
-						</nav>
-					</div>
+					<form  class="form66">
+						<div class="row">
+							<div class="col-xs-8" style="line-height:40px;">
+								<span class="grayDark fsz18">Сумма займа, руб.</span>
+							</div>
+							<div class="col-xs-4">
+								<input type="tel" name="zaimSumm" class="full slider1 tac" pattern="\d*" value="1500" />
+							</div>
+						</div>
+						<div class="sliderWrap">
+							<span class="sliderWrap_less">1500</span>
+							<span class="sliderWrap_more">15 000</span>
+							<div class="slider" id="slider1"></div>
+						</div>
+					
+						<div class="row">
+							<div class="col-xs-9" style="line-height:40px;">
+								<span class="grayDark fsz18">Срок займа, дней</span>
+							</div>
+							<div class="col-xs-3">
+								<input type="tel" name="zaimTime" class="full slider2" value="31" />
+							</div>
+						</div>
+						<div class="sliderWrap sliderWrap2">
+							<span class="sliderWrap_less">5</span>
+							<span class="sliderWrap_more">31</span>
+							<div class="slider" id="slider2"></div>
+						</div>
+						<hr class="marg" />
+						<div class="row returnWrap">
+							<div class="col-xs-5 return1">
+								Вернуть <br />
+								<b><span class="setZaim"></span>&nbsp;руб.</b>
+							</div>
+							<div class="col-xs-7 return2">
+								Дата <br />
+								<b><span class="getDate"></span> <span class="getMonth"></span> <span class="getFullYear"></span></b>
+							</div>
+						</div>
+						<div class="bg-white">
+							<div class="row mb0">
+								<div class="col-xs-12">
+									<a class="btn btn-red full">Оформить заем</a>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div> 
 			</div>
 		</div>
@@ -71,5 +107,10 @@
 		<script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
 		
 		<script src="js/scripts.js"></script>
+		<script>
+			$(function() {
+				slider63(4000, 8, 68);
+			});
+		</script>
 	</body> 
 </html>
