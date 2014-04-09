@@ -19,7 +19,7 @@
 	 <title>Главная</title> 
 	</head> 
 	<body> 
-		<div class="globalWrap">
+		<div class="globalWrap gray-bg">
 			<div class="menuWrap">
 				<nav>
 					<ul>
@@ -31,25 +31,54 @@
 						<li><a class="menuLink" href="#">Вопросы и ответы</a></li>
 						<li><a class="menuLink" href="#">Контакты</a></li>
 						<li><a class="menuLink" href="#">Личный кабинет</a><a href="#" class="menuFullSite">Полная версия сайта</a></li>
-				</ul>
+					</ul>
 				</nav>
 			</div>
-			<div id="wrapper" class="clearfix gray"> 
+			<div id="wrapper" class="clearfix"> 
 				<header id="header" class="header__account header__back">
-					<a class="accountTitle" href="51.html"></a>
-					<span>Заем №324354</span>
+					<a class="accountTitle" href="74.html"></a>
+					<span>Оплата через любой банк</span>
 				</header> 
 				<div id="body" class="container-fluid form" style="padding-bottom:109px;">
 					<div class="containerInner mb0">
-						<nav class="menuLinks">
-							<ul>
-								<li><a href="62.html">Информация о займе</a></li>
-								<li><a href="63.html">Отсрочка выплаты</a></li>
-								<li><a href="65.html">Реструктуризация</a></li>
-								<li><a href="74.html">Погашение</a></li>
-
-							</ul>
-						</nav>
+						<form class="form710">
+							<p class="gray fsz14 mb5">Дата платежа</p>
+							<div class="dateRow dateRow3">
+							<div class="dateRow_first">
+								<select required="" name="date1" class="full date1">
+									<option> </option>
+									<option>01</option>
+								</select>
+							</div>
+							<div class="dateRow_second">
+								<select required="" name="date2" class="full">
+									<option> </option>
+									<option>Месяц</option>
+								</select>
+							</div>
+							<div class="dateRow_third">
+								<select required="" name="date3" class="full">
+									<option> </option>
+									<option>Год</option>
+									<option>1999</option>
+									<option>2014</option>
+								</select>
+							</div>
+						</div>
+							<div class="row">
+								<div class="col-xs-10">
+									<p class="gray fsz14 mb5">Сумма</p>
+									<div class="pseudoRub">
+									<input type="tel" class="full tar" name="returns" />
+									</div>
+								</div>
+							</div>
+							<div class="row mb20">
+								<div class="col-xs-12">
+									<button class="btn btn-green btn-submit btn-wide">Оплатить</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div> 
 			</div>

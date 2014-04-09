@@ -2969,6 +2969,9 @@ hr.marg {
 	font-weight: bold;
 	text-decoration: none;
 }
+.menuLinks a:active {
+	color: #8cc54c;
+}
 .header__account {
  	color: #47484a !important;
  	font-family: 'Ubuntu', 'Ubuntu Beta', UbuntuBeta, Ubuntu, 'Bitstream Vera Sans', 'DejaVu Sans', 'Myriad Pro', Tahoma, sans-serif;
@@ -3190,22 +3193,168 @@ hr.marg {
 	color: #B0B0B0;
 }
 
+.takeMyMoney {
+	font-size: 18px;
+}
+.takeMyMoney a {
+	padding-left: 105px;
+	position: relative;
+}
+.takeMyMoney a > p {
+	color: #bbbaba;
+	font-size: 12px;
+}
+.takeMyMoney_credit a:before {
+	content:'';
+	width: 54px;
+	height: 36px;
+	background: url(../img/sprite.png) 0 -242px no-repeat;
+	margin-top: -18px;
+	position: absolute;left: 28px;top: 50%;
+}
+.takeMyMoney_qiwi a:before {
+	content:'';
+	width: 50px;
+	height: 55px;
+	background: url(../img/sprite.png) 0 -281px no-repeat;
+	margin-top: -27px;
+	position: absolute;left: 28px;top: 50%;
+}
+.takeMyMoney_elex a:before {
+	content:'';
+	width: 51px;
+	height: 54px;
+	background: url(../img/sprite.png) 0 -342px no-repeat;
+	margin-top: -26px;
+	position: absolute;left: 28px;top: 50%;
+}
+.takeMyMoney_mts a:before {
+	content:'';
+	width: 54px;
+	height: 28px;
+	background: url(../img/sprite.png) 0 -400px no-repeat;
+	margin-top: -14px;
+	position: absolute;left: 28px;top: 50%;
+}
+.takeMyMoney_gold a:before {
+	content:'';
+	width: 55px;
+	height: 29px;
+	background: url(../img/sprite.png) 0 -433px no-repeat;
+	margin-top: -15px;
+	position: absolute;left: 28px;top: 50%;
+}
+.takeMyMoney_bank a:before {
+	content:'';
+	width: 42px;
+	height: 47px;
+	background: url(../img/sprite.png) -62px -242px no-repeat;
+	margin-top: -23px;
+	position: absolute;left: 36px;top: 50%;
+}
+.takeMyMoney_bonus a:before {
+	content:'';
+	width: 42px;
+	height: 41px;
+	background: url(../img/sprite.png) -55px -295px no-repeat;
+	margin-top: -20px;
+	position: absolute;left: 36px;top: 50%;
+}
+.def_table {
+	font-size: 14px;
+}
+.def_table tr {
+	border-bottom: 1px solid #e6e6e7;
+}
+.def_table tr:last-child {
+	border-bottom: none;
+}
+.def_table th {
+	color: #cccccc;
+	text-align: left;
+	font-weight: normal;
+	padding: 7px;
+	vertical-align: top;
+}
+.def_table td {
+	color: #3d3d3d;
+	padding: 7px;
+	vertical-align: top;
+}
+
+.header_ball {
+	height: 22px;
+	float: right;
+	color: #525254;
+	font-family: Arial, sans-serif;
+	font-size: 18pt;
+	margin-right: 15px;
+	margin-left: 5px;
+	position: relative;top: -2px;
+}
+input[type="text"].input_dis {
+	color: #D5D5D5 !important;
+	opacity: 1 !important;
+}
+.slider_bonus {
+	padding-left: 30px;
+	padding-right: 71px;
+}
+.input_plus {
+	height: 40px;
+	line-height: 40px;
+	float: right;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 18px;
+	color: #D5D5D5;
+}
+.l724 {
+	margin: 20px 0;
+	font-size: 14px;
+}
+.l724 li {
+	margin-bottom: 20px;
+	padding-left: 40px;
+	position: relative;
+}
+.l724_1:before {
+	content:'';
+	width: 22px;
+	height: 16px;
+	background: url(../img/sprite.png) -90px -54px no-repeat;
+	position: absolute;top:3px;left: 5px;
+}
+.l724_2:before {
+	content:'';
+	width: 22px;
+	height: 16px;
+	background: url(../img/sprite.png) -90px -75px no-repeat;
+	position: absolute;top:3px;left: 5px;
+}
+.l724_3:before {
+	content:'';
+	width: 19px;
+	height: 28px;
+	background: url(../img/sprite.png) -90px -98px no-repeat;
+	position: absolute;top:3px;left: 7px;
+}
+.l724_4:before {
+	content:'';
+	width: 13px;
+	height: 21px;
+	background: url(../img/sprite.png) -90px -129px no-repeat;
+	position: absolute;top:3px;left: 10px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.p724 .unordered li {
+	padding-left: 40px;
+}
+.p724 .unordered li:before {
+	left: 12px;
+}
 
 
 
@@ -3672,6 +3821,13 @@ input[type=checkbox].styled.error ~ label:before {
 	.return63 .title {
 		font-size: 12px;
 	}
+
+	.def_table {
+		font-size: 12px;
+	}
+	.def_table td {
+		padding: 4px;
+	}
 }
 
 
@@ -3687,6 +3843,9 @@ input[type=checkbox].styled.error ~ label:before {
 	}
 	.accountTitle {
 		font-size: 18px;
+	}
+	.def_table {
+		font-size: 12px;
 	}
 }
 

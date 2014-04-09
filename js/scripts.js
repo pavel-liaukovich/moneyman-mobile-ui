@@ -450,7 +450,7 @@ $(function() {
 				}
 			},
 			submitHandler: function(form) {
-				alert( 'go ajax 13' )
+				// alert( 'go ajax 512' )
 				// form.submit();
 			}
 		});
@@ -461,7 +461,7 @@ $(function() {
 				}
 			},
 			submitHandler: function(form) {
-				alert( 'go ajax 513' )
+				// alert( 'go ajax 513' )
 				// form.submit();
 			}
 		});
@@ -484,6 +484,107 @@ $(function() {
 				// form.submit();
 			}
 		});
+
+		$('.form71').validate({
+			submitHandler: function(form,e) {
+				alert( 'go ajax 71' )
+				// form.submit();
+			}
+		});
+
+		$('.form72').validate({
+			submitHandler: function(form,e) {
+				window.location.href = '73.html'
+				// alert( 'go ajax 72' )
+				// form.submit();
+			}
+		});
+		$('.form75').validate({
+			rules: {
+				returns: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form,e) {
+				// alert( 'go ajax 75' )
+				// form.submit();
+			}
+		});
+		$('.form76').validate({
+			rules: {
+				returns: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form,e) {
+				// alert( 'go ajax 76' )
+				// form.submit();
+			}
+		});
+		$('.form77').validate({
+			rules: {
+				returns: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form,e) {
+				// alert( 'go ajax 77' )
+				// form.submit();
+			}
+		});
+		$('.form78').validate({
+			rules: {
+				returns: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form,e) {
+				// alert( 'go ajax 77' )
+				// form.submit();
+			}
+		});
+		$('.form710').validate({
+			rules: {
+				returns: {
+					digits: true,
+					tel: false
+				}
+			},
+			submitHandler: function(form) {
+				// alert( 'go ajax 710' )
+				// form.submit();
+			}
+		});
+		$('.form722').validate({
+			rules: {
+				name: {
+					names: true
+				},
+				lastName: {
+					names: true
+				},
+			},
+			submitHandler: function(form) {
+				// alert( 'go ajax 710' )
+				// form.submit();
+			}
+		});
+		// $('.form717').validate({
+		// 	rules: {
+		// 		bonus: {
+		// 			digits: true,
+		// 			tel: false
+		// 		}
+		// 	},
+		// 	submitHandler: function(form) {
+		// 		// alert( 'go ajax 710' )
+		// 		// form.submit();
+		// 	}
+		// });
 	})();
 	//\validation	
 
@@ -494,6 +595,10 @@ $(function() {
 	// if($('.tel').length) {
 	// 	$(".tel").inputmask({"mask": masks.tel});
 	// }
+
+	if($('.tel').length) {
+		$(".tel").attr('maxlength',10);
+	}
 	//\input mask
 
 	//14(not only 14) hide adress block
@@ -965,19 +1070,160 @@ $(function() {
 	})();
 
 	//63
-	// slider63(4000, 8, 68); - вызывать надо в коде страницы
-	$('.p63Next').on('click', function () {
+	// slider63(4000, 8, 68); - you should call it at page, not scripts.js file
+	$('.p63Next').on('click.p63', function () {
+		$(this).off('.p63');
 		$('.bg-white').slideToggle("fast");
 	})
 	//65
-	$('.p65Next').on('click', function () {
+	$('.p65Next').on('click.p65', function () {
+		$(this).off('.p65');
 		$('.p65oferta').slideToggle("fast");
 	})
 	$('.payment65').on('click', function () {
 		$('.payment65Block').slideToggle("fast");
 	})
 	
+	//716
+	//delete this when you will insert real data
+	$('.p716More').on('click', function () {
+		var t = $('#myTable'),
+			tr = $('.u_can_remove_this_class'),
+			clone= tr.clone().removeClass("u_can_remove_this_class");
 
+
+		t.append(clone.removeClass('.u_can_remove_this_class'));
+		return false;
+	})//delete this when you will insert real data
+	//\
+
+	//717
+	;(function () {
+		var i1 = $('.i717_1'),
+			i2 = $('.i717_2'),
+			sl = $('#slider717');
+
+		sl.slider({
+			range: "min",
+			value: 0,
+			min: 0,
+			max: 150000,
+			step: 1,
+			slide: function( event, ui ) {
+				var val = ui.value;
+				change(val);
+			},
+			change: function (event, ui) {
+				var val = ui.value;
+				change(val);
+			}
+		});
+
+		function change(value) {
+			i2.val(value);	
+			i1.val(Math.round(value*0.1));
+		}
+
+
+		i2.on('change', function () {
+			sl.slider( "value", $(this).val() );
+		})
+	})();
+	
+	//718
+	;(function () {
+		var i1 = $('.i718_1'),
+			i2 = $('.i718_2'),
+			sl = $('#slider718');
+
+		sl.slider({
+			range: "min",
+			value: 0,
+			min: 0,
+			max: 150000,
+			step: 1,
+			slide: function( event, ui ) {
+				var val = ui.value;
+				change(val);
+			},
+			change: function (event, ui) {
+				var val = ui.value;
+				change(val);
+			}
+		});
+
+		function change(value) {
+			i2.val(value);	
+			
+		}
+
+		i2.on('change', function () {
+			sl.slider( "value", $(this).val() );
+		})
+	})();
+
+	//719
+	;(function () {
+		var i1 = $('.i719_1'),
+			i2 = $('.i719_2'),
+			sl = $( "#slider719" );
+
+		sl.slider({
+			range: "min",
+			value: 0,
+			min: 0,
+			max: 150000,
+			step: 1,
+			slide: function( event, ui ) {
+				var val = ui.value;
+				change(val);
+			},
+			change: function (event, ui) {
+				var val = ui.value;
+				change(val);
+			}
+		});
+
+		function change(value) {
+			i2.val(value);	
+			
+		}
+		i2.on('change', function () {
+			sl.slider( "value", $(this).val() );
+		})
+	})();
+
+
+	//720
+	;(function () {
+		var i1 = $('.i720_1'),
+			i2 = $('.i720_2'),
+			sl = $( "#slider720" );
+
+		sl.slider({
+			range: "min",
+			value: 0,
+			min: 0,
+			max: 150000,
+			step: 1,
+			slide: function( event, ui ) {
+				var val = ui.value;
+				change(val);
+			},
+			change: function (event, ui) {
+				var val = ui.value;
+				change(val);
+			}
+		});
+
+		function change(value) {
+			i2.val(value);	
+			
+		}
+		i2.on('change', function () {
+			sl.slider( "value", $(this).val() );
+		})
+	})();
 
 
 
@@ -1098,13 +1344,18 @@ function slider63(loan, days1, days2) {//loan - сколько денег бра
 			val = ui.value;
 			$select.val(val);
 			setZaim2();
+		},
+		change: function (event, ui) {
+			val = ui.value;
+			$select.val(val);
+			setZaim2();
 		}
 	});
 
 	$select.on('change', function () {
 		val = $(this).val();
 		$("#slider63").slider("value", val);
-		setZaim2();
+		// setZaim2();
 	})
 
 	setZaim2();
