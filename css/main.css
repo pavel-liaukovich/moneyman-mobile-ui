@@ -2468,7 +2468,8 @@ hr.marg {
 	position: absolute;left: 10px;top: 3px;
 }
 .oferta {
-	max-height: 250px;
+	/*max-height: 250px;*/
+	height: 250px;
 	overflow: auto;
 	color: #525254;
 	font-size: 1em;
@@ -3405,8 +3406,22 @@ input[type="text"].input_dis {
 
 
 
-
-
+/*.overthrow-enabled .menuWrap nav {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.overthrow-enabled .oferta {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}*/
+.overthrow-enabled .overthrow {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.oferta.overthrow, .menuWrap .overthrow ul {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 
 /* ==========================================================================
 	 UI
@@ -3787,7 +3802,9 @@ input[type=checkbox].styled.error ~ label:before {
 	display: none;
 }
 
-
+.lightBlack {
+	color: #47484A;
+}
 
 
 

@@ -103,7 +103,9 @@
 ;(function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this);
 
 
-
+/*! overthrow - An overflow:auto polyfill for responsive design. - v0.7.0 - 2013-11-04
+* Copyright (c) 2013 Scott Jehl, Filament Group, Inc.; Licensed MIT */
+!function(a){var b=a.document,c=b.documentElement,d="overthrow-enabled",e="ontouchmove"in b,f="WebkitOverflowScrolling"in c.style||"msOverflowStyle"in c.style||!e&&a.screen.width>800||function(){var b=a.navigator.userAgent,c=b.match(/AppleWebKit\/([0-9]+)/),d=c&&c[1],e=c&&d>=534;return b.match(/Android ([0-9]+)/)&&RegExp.$1>=3&&e||b.match(/ Version\/([0-9]+)/)&&RegExp.$1>=0&&a.blackberry&&e||b.indexOf("PlayBook")>-1&&e&&-1===!b.indexOf("Android 2")||b.match(/Firefox\/([0-9]+)/)&&RegExp.$1>=4||b.match(/wOSBrowser\/([0-9]+)/)&&RegExp.$1>=233&&e||b.match(/NokiaBrowser\/([0-9\.]+)/)&&7.3===parseFloat(RegExp.$1)&&c&&d>=533}();a.overthrow={},a.overthrow.enabledClassName=d,a.overthrow.addClass=function(){-1===c.className.indexOf(a.overthrow.enabledClassName)&&(c.className+=" "+a.overthrow.enabledClassName)},a.overthrow.removeClass=function(){c.className=c.className.replace(a.overthrow.enabledClassName,"")},a.overthrow.set=function(){f&&a.overthrow.addClass()},a.overthrow.canBeFilledWithPoly=e,a.overthrow.forget=function(){a.overthrow.removeClass()},a.overthrow.support=f?"native":"none"}(this),function(a,b,c){if(b!==c){b.easing=function(a,b,c,d){return c*((a=a/d-1)*a*a+1)+b},b.tossing=!1;var d;b.toss=function(a,e){b.intercept();var f,g,h=0,i=a.scrollLeft,j=a.scrollTop,k={top:"+0",left:"+0",duration:50,easing:b.easing,finished:function(){}},l=!1;if(e)for(var m in k)e[m]!==c&&(k[m]=e[m]);return"string"==typeof k.left?(k.left=parseFloat(k.left),f=k.left+i):(f=k.left,k.left=k.left-i),"string"==typeof k.top?(k.top=parseFloat(k.top),g=k.top+j):(g=k.top,k.top=k.top-j),b.tossing=!0,d=setInterval(function(){h++<k.duration?(a.scrollLeft=k.easing(h,i,k.left,k.duration),a.scrollTop=k.easing(h,j,k.top,k.duration)):(f!==a.scrollLeft?a.scrollLeft=f:(l&&k.finished(),l=!0),g!==a.scrollTop?a.scrollTop=g:(l&&k.finished(),l=!0),b.intercept())},1),{top:g,left:f,duration:b.duration,easing:b.easing}},b.intercept=function(){clearInterval(d),b.tossing=!1}}}(this,this.overthrow),function(a,b,c){if(b!==c){b.scrollIndicatorClassName="overthrow";var d=a.document,e=d.documentElement,f="native"===b.support,g=b.canBeFilledWithPoly,h=(b.configure,b.set),i=b.forget,j=b.scrollIndicatorClassName;b.closest=function(a,c){return!c&&a.className&&a.className.indexOf(j)>-1&&a||b.closest(a.parentNode)};var k=!1;b.set=function(){if(h(),!k&&!f&&g){a.overthrow.addClass(),k=!0,b.support="polyfilled",b.forget=function(){i(),k=!1,d.removeEventListener&&d.removeEventListener("touchstart",u,!1)};var j,l,m,n,o=[],p=[],q=function(){o=[],l=null},r=function(){p=[],m=null},s=function(a){n=j.querySelectorAll("textarea, input");for(var b=0,c=n.length;c>b;b++)n[b].style.pointerEvents=a},t=function(a,b){if(d.createEvent){var e,f=(!b||b===c)&&j.parentNode||j.touchchild||j;f!==j&&(e=d.createEvent("HTMLEvents"),e.initEvent("touchend",!0,!0),j.dispatchEvent(e),f.touchchild=j,j=f,f.dispatchEvent(a))}},u=function(a){if(b.intercept&&b.intercept(),q(),r(),j=b.closest(a.target),j&&j!==e&&!(a.touches.length>1)){s("none");var c=a,d=j.scrollTop,f=j.scrollLeft,g=j.offsetHeight,h=j.offsetWidth,i=a.touches[0].pageY,k=a.touches[0].pageX,n=j.scrollHeight,u=j.scrollWidth,v=function(a){var b=d+i-a.touches[0].pageY,e=f+k-a.touches[0].pageX,s=b>=(o.length?o[0]:0),v=e>=(p.length?p[0]:0);b>0&&n-g>b||e>0&&u-h>e?a.preventDefault():t(c),l&&s!==l&&q(),m&&v!==m&&r(),l=s,m=v,j.scrollTop=b,j.scrollLeft=e,o.unshift(b),p.unshift(e),o.length>3&&o.pop(),p.length>3&&p.pop()},w=function(){s("auto"),setTimeout(function(){s("none")},450),j.removeEventListener("touchmove",v,!1),j.removeEventListener("touchend",w,!1)};j.addEventListener("touchmove",v,!1),j.addEventListener("touchend",w,!1)}};d.addEventListener("touchstart",u,!1)}}}}(this,this.overthrow),function(a){a.overthrow.set()}(this);
 
 
 
@@ -129,12 +131,19 @@ $(function() {
 	}, 'Пожалуйста, используйте: русские символы, английские символы, цифры. Максимум символов - 32.');
 
 	$.validator.addMethod("tel", function (value, element) {
-		var length = (value.length == 14) ? true : false,
+		var length = (value.length == 10) ? true : false,
 			under = /_/.test(value);
 			
 		if(length && !under) {
 			return true;
 		}
+		//старая версия с маской
+		// var length = (value.length == 14) ? true : false,
+		// 	under = /_/.test(value);
+			
+		// if(length && !under) {
+		// 	return true;
+		// }
 	}, 'Пожалуйста, введите номер телефона.');
 
 	$.validator.addMethod("names", function (value, element) {
@@ -573,6 +582,51 @@ $(function() {
 				// form.submit();
 			}
 		});
+		$('.form723').validate({
+			submitHandler: function(form) {
+				// alert( 'go ajax 710' )
+				// form.submit();
+			}
+		});
+		$('.form725').validate({
+			rules: {
+				reg6: {
+					address: true,
+				},
+				reg7: {
+					address: true,
+				},
+				reg8: {
+					address: true,
+				},
+				reg15: {
+					address: true,
+				},
+				reg16: {
+					address: true,
+				},
+				reg17: {
+					address: true,
+				},
+
+
+				reg9: {
+					tel: false,
+					digits: true,
+				},
+				reg18: {
+					tel: false,
+					digits: true,
+				},
+				phone_home: {
+					tel: true
+				}
+			},
+			submitHandler: function(form) {
+				// alert( 'go ajax 725' )
+				// form.submit();
+			}
+		});
 		// $('.form717').validate({
 		// 	rules: {
 		// 		bonus: {
@@ -597,7 +651,7 @@ $(function() {
 	// }
 
 	if($('.tel').length) {
-		$(".tel").attr('maxlength',10);
+		$(".tel").attr('maxlength',10).removeAttr('placeholder');
 	}
 	//\input mask
 
@@ -1121,7 +1175,7 @@ $(function() {
 
 		function change(value) {
 			i2.val(value);	
-			i1.val(Math.round(value*0.1));
+			i1.val(Math.round(value*0.01));
 		}
 
 
@@ -1153,7 +1207,8 @@ $(function() {
 		});
 
 		function change(value) {
-			i2.val(value);	
+			i2.val(value);
+			i1.val(Math.round(value*0.01));	
 			
 		}
 
@@ -1186,7 +1241,7 @@ $(function() {
 
 		function change(value) {
 			i2.val(value);	
-			
+			i1.val(Math.round(value*0.01));	
 		}
 		i2.on('change', function () {
 			sl.slider( "value", $(this).val() );
@@ -1217,7 +1272,8 @@ $(function() {
 		});
 
 		function change(value) {
-			i2.val(value);	
+			i2.val(value);
+			i1.val(Math.round(value*0.01));
 			
 		}
 		i2.on('change', function () {
@@ -1316,6 +1372,15 @@ $(function() {
 			$('.styled').removeClass('styled');
 		}
 	})();
+
+
+
+	// console.log(overthrow.support)
+	// alert( overthrow.support )
+
+	if(overthrow.support == 'polyfilled') {
+		$('.oferta, .menuWrap nav').addClass('overthrow');
+	}
 });
 
 
