@@ -2223,7 +2223,7 @@ a:link {-webkit-tap-highlight-color: rgba(148,199,74,.5);}
 	background-color: #fff;
 	padding-top: 12px;
 	position: relative;z-index: 2;
-
+	padding-right: 10px;
 
 }
 
@@ -3289,7 +3289,7 @@ hr.marg {
 	color: #525254;
 	font-family: Arial, sans-serif;
 	font-size: 18pt;
-	margin-right: 15px;
+	margin-right: 5px;
 	margin-left: 5px;
 	position: relative;top: -2px;
 }
@@ -3357,6 +3357,9 @@ input[type="text"].input_dis {
 	left: 12px;
 }
 
+.col-xs-3 .error {
+	font-size: 11px;
+}
 
 
 
@@ -3805,9 +3808,6 @@ input[type=checkbox].styled.error ~ label:before {
 .lightBlack {
 	color: #47484A;
 }
-
-
-
 
 
 

@@ -1260,7 +1260,7 @@ $(function() {
 			value: 0,
 			min: 0,
 			max: 150000,
-			step: 1,
+			step: 1000,
 			slide: function( event, ui ) {
 				var val = ui.value;
 				change(val);
@@ -1273,7 +1273,7 @@ $(function() {
 
 		function change(value) {
 			i2.val(value);
-			i1.val(Math.round(value*0.01));
+			i1.val(Math.round(value*0.5));
 			
 		}
 		i2.on('change', function () {
