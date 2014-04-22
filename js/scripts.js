@@ -1335,7 +1335,7 @@ $(function() {
 	//sms blocks
 	;(function () {
 		var timerRow = $('.sms_timerWrap'),
-			timerSpan = $('.sms_timer'),
+			timerSpan = $('<p class="sms_timer" />'),
 			timerLink = $('.codeLink');
 
 		$('.sms_button').on('click', function () {
@@ -1343,12 +1343,14 @@ $(function() {
 			$('.sms_body').slideDown('fast');
 		});
 		timerLink.on('click', function (e) {
-			var timer = 59;
+			var timer = 5;
 				
 			$(this).slideUp('fast');
+			$(this).after(timerSpan);
 			e.preventDefault();
 
-			$('.sms_timerWrap').slideDown('fast');
+
+			// $('.sms_timerWrap').slideDown('fast');
 			timerSpan.text('Код отправлен 59');
 
 
@@ -1359,7 +1361,8 @@ $(function() {
 				} else {
 					timerSpan.text('Код отправлен '+timer)
 					clearInterval(interval);
-					timerRow.slideUp('fast');
+					timerSpan.remove();
+					// timerRow.slideUp('fast');
 					timerLink.slideDown('fast');
 				}
 			}, 1000);

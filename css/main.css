@@ -3142,7 +3142,9 @@ hr.marg {
 	display: none;
 	color: #999999;
 }
-
+.sms_timer {
+	color: #999999;
+}
 .vertLabel {
 	height: 40px;
 	display: table-cell;
@@ -3288,10 +3290,13 @@ hr.marg {
 	float: right;
 	color: #525254;
 	font-family: Arial, sans-serif;
-	font-size: 18pt;
+	/*font-size: 18pt;*/
+	font-size: 19px;
 	margin-right: 5px;
 	margin-left: 5px;
-	position: relative;top: -2px;
+	position: relative;
+	/*top: -2px;*/
+	top: 3px;
 }
 input[type="text"].input_dis {
 	color: #D5D5D5 !important;
